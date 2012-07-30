@@ -1,0 +1,172 @@
+Lunes 22-01-2009
+-----------------------
+
+* Al arrancar se veía un frame con la camara mal colocada. 
+
+
+
+Sabado 20-01-2009
+-----------------------
+
++ Preloader
+
+
+Jueves 19-01-2009
+-----------------------
+
++ Ordenamiento componentes
+
++ Barra de progreso
+
+* Bug horrible por el que se recolectaba el IsoEngine
+ 
+
+Miercoles 18-01-2009
+-----------------------
+
++ Central Loader perfilado.
+
+
+Lunes 16-01-2009
+-----------------------
+
++ Mejoras variadas en el QuizEditor.
+
+* Bug en el reescalado de la librería de assets.
+
+
+Domingo 15-03-2009
+-----------------------
+
++ Primera versión del QuizEditor
+
+
+Sabado 14-03-2009
+-----------------------
+
+* El MOUSE_UP se coge mejor de la stage para no perderlo.
+
+
+Viernes 13-03-2009
+-----------------------
+
+* Bugs con el redondeo a celda, tanto en la interpolación del Character como en el AStar -> GetRoundedWorldPos
+
+
+Jueves 12-03-2009
+-----------------------
+
++ Ahora el thumbnail de los objetos de la librería se pinta escalado para que quepa justo en el alto
+
++ Eliminar Background
+
+* Bug del foco y el delete, que a veces no borraba
+
+
+Miercoles 11-03-2009
+-----------------------
+
+* Corregido bug en el pintado del grid, se pintaba no snapeado
+
+
+Miercoles 04-03-2009
+-----------------------
+
+* Bug: Limites de la cámara
+
+* Bug: Al clonar no se actualizaba bien el objeto seleccionado.
+
+
+Jueves 26-02-2009
+-----------------------
+
+* Al clickar fuera de la escena y mover el raton hacia dentro de la escena, arrastraba el objeto seleccionado.
+
++ El menu "Añadir" ahora muestra los componentes de cada juego dentro de un submenu
+
+
+Miercoles 25-02-2009
+------------------------
+
++ Librería se guarda al grabar el mapa
+
+* Bug al grabar mapa con librería "Nueva"
+
++ Ya no se usa el NumericStepper, ahora es un TextField
+
+
+
+Martes 24-02-2009
+------------------------
+
++ El render de caminabilidad y grid se guarda & carga con el mapa
+
+* Límites a la cámara
+
+* Pequeño bug cuando se hacia la ventana demasiado pequeña
+
+
+Viernes 16-01-2009
+------------------------
+
++ Función de rotación de objetos con la barra espaciadora.
+
++ Cacheo con cacheAsBitmap de todos los movieclips q se crean.
+
+
+
+Lunes 11-01-2009
+-------------------------
+
+* Cambios cosméticos en la heurística del A*
+
+
+Domingo 10-01-2009
+-------------------------
+
+* Ahora cada vez que la ventana se redimensiona la cámara permanece apuntando al mismo sitio.
+
++ Añadida funcionalidad para cargar un nuevo mapa desde los componentes. TheGameModel.TheIsoEngine.Load("mapa.xml");
+
+
+
+Sabado 9-01-2009
+-------------------------
+
++ Optimizaciones velocidad en el pathfinding.
+
+* OnInteraction -> OnCharacterInteraction
+
+* Door.as: Corregido gotoAndStop abierto/cerrado. Añadido nuevo flag para diferenciar el toggle entre 
+		   OnClickInteraction y OnCharacterInteraction.
+
++ Función de comodidad IsWorldPosWalkable.
+
+* Optimizaciones de memoria y corrección de todos los leaks detectados mediante profiling.
+
+
+
+Jueves 8-01-2009
+-------------------------
+
+* Corregido problema con el tamaño de la bounding box de selección de los objetos de la librería.
+
+
+
+Miercoles 7-01-2009
+-------------------------
+
+* Corregido bug por el que el drag de un objeto de la librería hacia el mundo a veces no funcionaba.
+
+* Corregido el que se pueda exportar cualquier tipo de objeto desde los SWFs de la librería, por ejemplo
+  un sonido. Simplemente los ignorará.
+  
++ Mejorado la estética del rectangulo de selección de un objeto de la librería. Ahora se ajusta al tamaño.
+
++ Ahora se pueden borrar SWFs dentro de la librería (botóncillo de close en el tab).
+
++ Se detecta que hay un objeto en un SWF con el nombre exportado del MovieClip duplicado. Se muestra un
+  mensaje de aviso.
+
++ Cuadradillos transparentes.
+

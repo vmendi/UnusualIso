@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+				xmlns:flexlib="http://code.google.com/p/flexlib/" 
+				layout="absolute" backgroundColor="0x000000" backgroundGradientColors="[]"
+				frameRate="30"	
+				width="850" height="500"
+				addedToStage="OnAddedToStage();" preloader="ProgressPreloader">
+
+	<mx:Script>
+		<![CDATA[
+		import utils.UIComponentWrapper;
+		import utils.FPSCounter;
+		import utils.KeyboardHandler;
+		import flash.events.Event;
+		import Model.*;
+
+		protected function OnAddedToStage() : void
+		{
+			KeyboardHandler.Init(stage);
+			//FPSCounter.Init(stage, new Point(0, 0));
+			
+			myProgressBar.x = this.width * 0.5;
+			myProgressBar.y = this.height * 0.5;
+			(myProgressBar.content as MovieClip).gotoAndStop(0);
+			
+			mIsoEngine = new IsoEngine(this);
+			mIsoEngine.TheCentralLoader.addEventListener(ProgressEvent.PROGRESS, OnProgress, false, 0, true);
+			mIsoEngine.TheCentralLoader.addEventListener("LoadComplete", OnLoadComplete, false, 0, true);
+			mIsoEngine.Load("Maps/OpelInsignia/OIPruebas.xml");
+			//mIsoEngine.Load("Maps/MmoGirls/Apartment.xml");
+			//mIsoEngine.Load("Maps/Platforms/PlatformsTest.xml");
+			
+			/*
+			// Test Papervision
+			var test : Papervision3DTest = new Papervision3DTest();
+			addChild(new UIComponentWrapper(test));
+			*/
+		}
+		
+		private function OnLoadComplete(event:Event) : void
+		{
+			this.removeChild(myProgressBar);
+		}
+		
+		private function OnProgress(event:ProgressEvent) : void
+		{
+			var percent : int = Math.floor((event.bytesLoaded/event.bytesTotal*100));
+			(myProgressBar.content as MovieClip).gotoAndStop(percent);
+			
+			trace(event.bytesLoaded + " of " + event.bytesTotal + "; " + percent + "%");
+		}
+		
+		private var mIsoEngine : IsoEngine;
+		
+		]]>
+	</mx:Script>
+	
+	<mx:SWFLoader id="myProgressBar" scaleContent="false" source="@Embed(source='Embedded/Loading.swf', symbol='mcLoading')"/>
+
+</mx:Application>

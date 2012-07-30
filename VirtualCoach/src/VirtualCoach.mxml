@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+				layout="absolute" backgroundColor="0x000000" backgroundGradientColors="[]"
+				frameRate="30"	
+				width="850" height="500"
+				addedToStage="OnAddedToStage();" preloader="ProgressPreloader">
+
+	<mx:Script>
+		<![CDATA[
+		import mx.controls.TextInput;
+		import utils.UIComponentWrapper;
+		import utils.FPSCounter;
+		import utils.KeyboardHandler;
+		import flash.events.Event;
+		import Model.*;
+
+		protected function OnAddedToStage() : void
+		{
+			//KeyboardHandler.Init(stage);
+			//FPSCounter.Init(stage, new Point(0, 0));
+			
+			myProgressBar.x = this.width * 0.5;
+			myProgressBar.y = this.height * 0.5;
+			(myProgressBar.content as MovieClip).gotoAndStop(0);
+
+			mIsoEngine = new IsoEngine(this);
+			mIsoEngine.TheCentralLoader.addEventListener("LoadStart", OnLoadStart, false, 0, true);
+			mIsoEngine.TheCentralLoader.addEventListener(ProgressEvent.PROGRESS, OnProgress, false, 0, true);
+			mIsoEngine.TheCentralLoader.addEventListener("LoadComplete", OnLoadComplete, false, 0, true);			
+			mIsoEngine.Load("Maps/OpelInsignia/OIPruebas.xml");
+		}
+		
+		private function OnLoadComplete(event:Event) : void
+		{
+			myProgressBar.visible = false;
+		}
+		
+		private function OnLoadStart(event:Event):void
+		{
+			myProgressBar.visible = true;
+			(myProgressBar.content as MovieClip).gotoAndStop(0);
+		}
+		
+		private function OnProgress(event:ProgressEvent) : void
+		{
+			var percent : int = Math.floor((event.bytesLoaded/event.bytesTotal*100));
+			(myProgressBar.content as MovieClip).gotoAndStop(percent);
+			
+			//trace(event.bytesLoaded + " of " + event.bytesTotal + "; " + percent + "%");
+		}
+		
+		private var mIsoEngine : IsoEngine;
+		
+		]]>
+	</mx:Script>
+	
+	<mx:SWFLoader id="myProgressBar" scaleContent="false" source="@Embed(source='Embedded/Loading.swf', symbol='mcLoading')"/>
+
+</mx:Application>

@@ -1,0 +1,2330 @@
+<QuizModel>
+  <Node>
+    <NodeID>Node01</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de los siguientes jugadores no ha ganado 6 torneos Grand Slam individuales?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node03");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node02</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node03</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node04</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node05</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node02</NodeID>
+    <AnswerText>Stefan Edberg</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node03</NodeID>
+    <AnswerText>Ken Rosewell</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node04</NodeID>
+    <AnswerText>Boris Becker</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node05</NodeID>
+    <AnswerText>Mats Wilander</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node06</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de estos tenistas ha ganado más torneos Grand Slam?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node09");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node07</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node08</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node09</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node10</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node07</NodeID>
+    <AnswerText>Martina Navratilova</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node08</NodeID>
+    <AnswerText>Steffi Graf</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node09</NodeID>
+    <AnswerText>Margaret Smith Court</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node10</NodeID>
+    <AnswerText>Helen Wills Moody</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node11</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué tenista femenina ganó el U.S. Open en 1997?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node14");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node12</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node13</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node14</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node15</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node12</NodeID>
+    <AnswerText>Lindsay Davenport</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node13</NodeID>
+    <AnswerText>Monica Seles</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node14</NodeID>
+    <AnswerText>Martina Hingis</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node15</NodeID>
+    <AnswerText>Venus Williams</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node16</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Quién ganó la final masculina de Roland Garros en 1995?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node20");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node17</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node18</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node19</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node20</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node17</NodeID>
+    <AnswerText>Sergi Bruguera</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node18</NodeID>
+    <AnswerText>Andre Agassi</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node19</NodeID>
+    <AnswerText>Yevgeny Kafelnikov</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node20</NodeID>
+    <AnswerText>Thomas Muster</AnswerText>
+    <QuestionText/>
+    <EnterCode>SetSuccess(true);</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node21</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué pareja de dobles ha ganado más torneos Grand Slam?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node25");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node22</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node23</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node24</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node25</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node22</NodeID>
+    <AnswerText>Agassi/Sampras</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node23</NodeID>
+    <AnswerText>Hingis/Kournikova</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node24</NodeID>
+    <AnswerText>Williams/Williams</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node25</NodeID>
+    <AnswerText>The Woodies</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node26</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Quién ganó la final femenina de Roland Garros en 1991?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node27");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node27</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node28</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node29</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node30</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node27</NodeID>
+    <AnswerText>Monica Seles</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node28</NodeID>
+    <AnswerText>Conchita Martinez</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node29</NodeID>
+    <AnswerText>Steffi Graf</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node30</NodeID>
+    <AnswerText>Martina Navralilova</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node31</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuántos jugadores conforman el cuadro de individuales de un Grand Slam?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node33");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node32</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node33</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node34</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node35</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node32</NodeID>
+    <AnswerText>64 jugadores</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node33</NodeID>
+    <AnswerText>128 jugadores</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node34</NodeID>
+    <AnswerText>256 jugadores</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node35</NodeID>
+    <AnswerText>100 jugadores</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node36</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál es el Grand Slam de más reciente creación?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node38");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node37</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node38</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node39</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node40</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node37</NodeID>
+    <AnswerText>Abierto de Australia</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node38</NodeID>
+    <AnswerText>Roland Garros</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node39</NodeID>
+    <AnswerText>U.S. Open</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node40</NodeID>
+    <AnswerText>Wimbledon</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node41</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de estas parejas ganó la final masculina y femenina del U.S. Open en 1994?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node42");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node42</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node43</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node44</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node45</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node42</NodeID>
+    <AnswerText>Agassi/Sánchez-Vicario</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node43</NodeID>
+    <AnswerText>Agassi/Davenport</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node44</NodeID>
+    <AnswerText>Sampras/Hingis</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node45</NodeID>
+    <AnswerText>Agassi/Hingis</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node46</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de estos jugadores nunca ha ganado un torneo Gran Slam individual?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node50");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node47</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node48</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node49</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node50</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node47</NodeID>
+    <AnswerText>Jana Novotna</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node48</NodeID>
+    <AnswerText>Thomas Muster</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node49</NodeID>
+    <AnswerText>Serena Williams</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node50</NodeID>
+    <AnswerText>Magnus Norman</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node51</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de los siguientes jugadores ha ganado el Roland Garros?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node54");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node52</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node53</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node54</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node55</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node52</NodeID>
+    <AnswerText>David Ferrer</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node53</NodeID>
+    <AnswerText>Virgina Ruano</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node54</NodeID>
+    <AnswerText>Juan Carlos Ferrero</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node55</NodeID>
+    <AnswerText>Carlos Boluda</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node56</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de los siguientes tenistas ha ganado 40 títulos, incluyendo 9 Gran Slam?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node57");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node57</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node58</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node59</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node60</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node57</NodeID>
+    <AnswerText>Virginia Ruano</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node58</NodeID>
+    <AnswerText>Javier Martí</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node59</NodeID>
+    <AnswerText>David Ferrer</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node60</NodeID>
+    <AnswerText>Juan Carlos Ferrero</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node61</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué dos tenistas han recibido el Premio Nacional del Deporte?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node62");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node62</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node63</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node64</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node65</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node62</NodeID>
+    <AnswerText>Virginia Ruano y Anabel Medina</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node63</NodeID>
+    <AnswerText>Carlos Boluda y Juan Carlos Ferrero</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node64</NodeID>
+    <AnswerText>Carlos Boluda y Javier Martí</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node65</NodeID>
+    <AnswerText>Anabel Medina y Javier Martí</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node66</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de los siguientes tenistas ha logrado dos medallas de plata en los Juegos Olímpicos en Atenas y Pekín?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node69");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node67</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node68</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node69</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node70</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node67</NodeID>
+    <AnswerText>Javier Martí</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node68</NodeID>
+    <AnswerText>David Ferrer</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node69</NodeID>
+    <AnswerText>Virgina Ruano</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node70</NodeID>
+    <AnswerText>Anabel Medina</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node71</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de los siguientes jugadores fue líder de la ATP durante 8 semanas en 2003?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node75");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node72</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node73</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node74</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node75</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node72</NodeID>
+    <AnswerText>David Ferrer</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node73</NodeID>
+    <AnswerText>Javier Martí</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node74</NodeID>
+    <AnswerText>Carlos Boluda</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node75</NodeID>
+    <AnswerText>Juan Carlos Ferrero</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node76</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de los siguientes jugadores recibió el premio al deportista con Mayor Progresión en el 2007?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node79");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node77</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node78</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node79</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node80</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node77</NodeID>
+    <AnswerText>Javier Martí</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node78</NodeID>
+    <AnswerText>Juan Carlos Ferrero</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node79</NodeID>
+    <AnswerText>David Ferrer</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node80</NodeID>
+    <AnswerText>Carlos Boluda</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node81</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Desde qué año compite Anabel Medina en el circuito profesional?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node83");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node82</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node83</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node84</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node85</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node82</NodeID>
+    <AnswerText>1997</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node83</NodeID>
+    <AnswerText>1998</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node84</NodeID>
+    <AnswerText>1999</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node85</NodeID>
+    <AnswerText>2000</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node86</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de los siguientes jugadores recibió el Premio Siete Estrellas del Deporte 2007 de la Comunidad de Madrid?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node88");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node87</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node88</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node89</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node90</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node87</NodeID>
+    <AnswerText>Carlos Boluda</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node88</NodeID>
+    <AnswerText>Javier Martí</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node89</NodeID>
+    <AnswerText>Anabel Medina</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node90</NodeID>
+    <AnswerText>David Ferrer</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node91</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de los siguientes tenistas ha sido número 1 del mundo en dobles durante más de dos años de forma ininterrumpida?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node94");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node92</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node93</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node94</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node95</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node92</NodeID>
+    <AnswerText>Juan Carlos Ferrero</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node93</NodeID>
+    <AnswerText>Anabel Medina</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node94</NodeID>
+    <AnswerText>Virginia Ruano</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node95</NodeID>
+    <AnswerText>David Ferrer</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node96</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuál de los siguientes tenistas se impuso en 1997 en el I Trofeo Marca Promesas?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node96");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node97</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node98</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node99</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node100</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node97</NodeID>
+    <AnswerText>David Ferrer</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node98</NodeID>
+    <AnswerText>Juan Carlos Ferrero</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node99</NodeID>
+    <AnswerText>Virginia Ruano</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node100</NodeID>
+    <AnswerText>Anabel Medina</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node101</NodeID>
+    <AnswerText/>
+    <QuestionText>Si tu contrincante logra un golpe ganador y su pie toca la parte inferior de la red, ¿para quién es el punto?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node104");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node102</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node103</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node104</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node105</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node102</NodeID>
+    <AnswerText>Para nadie</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node103</NodeID>
+    <AnswerText>Se repite el punto</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node104</NodeID>
+    <AnswerText>Para ti</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node105</NodeID>
+    <AnswerText>Para tu contrincante</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node106</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuántas raquetas se pueden utilizar en un partido?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node110");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node107</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node108</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node109</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node110</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node107</NodeID>
+    <AnswerText>Un máximo de 3</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node108</NodeID>
+    <AnswerText>Un máximo de 4</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node109</NodeID>
+    <AnswerText>Un máximo de 5</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node110</NodeID>
+    <AnswerText>No hay límite</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node111</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Con qué marcador del set se juega un tie-break?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node113");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node112</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node113</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node114</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node115</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node112</NodeID>
+    <AnswerText>5-5</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node113</NodeID>
+    <AnswerText>6-6</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node114</NodeID>
+    <AnswerText>6-5</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node115</NodeID>
+    <AnswerText>5-6</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node116</NodeID>
+    <AnswerText/>
+    <QuestionText>Si tu oponente golpea la pelota con un efecto que hace que la pelota bote en tu campo y luego vuelva a pasar por encima de la red al suyo sin que tú la hayas golpeado, ¿para quién es el punto?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node117");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node117</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node118</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node119</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node120</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node117</NodeID>
+    <AnswerText>Para tu contrincante</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node118</NodeID>
+    <AnswerText>Se repite el punto</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node119</NodeID>
+    <AnswerText>Para nadie</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node120</NodeID>
+    <AnswerText>Para ti</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node121</NodeID>
+    <AnswerText/>
+    <QuestionText>Si tu contrincante no está seguro de si tu passing shot fue dentro o fuera, ¿qué ocurre?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node124");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node122</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node123</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node124</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node125</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node122</NodeID>
+    <AnswerText>Se repite el punto</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node123</NodeID>
+    <AnswerText>El punto es para él</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node124</NodeID>
+    <AnswerText>El punto es para ti</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node125</NodeID>
+    <AnswerText>El punto no es para nadie</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node126</NodeID>
+    <AnswerText/>
+    <QuestionText>Si en el primer servicio de tu rival la pelota te golpea en la pierna antes de botar, ¿qué ocurre?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node128");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node127</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node128</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node129</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node130</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node127</NodeID>
+    <AnswerText>El punto es para ti</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node128</NodeID>
+    <AnswerText>El punto es para él</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node129</NodeID>
+    <AnswerText>Dispone del segundo servicio</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node130</NodeID>
+    <AnswerText>Queda descalificado</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node131</NodeID>
+    <AnswerText/>
+    <QuestionText>Si tu rival envía la pelota tan lejos que rebota en una pared y tú la golpeas con éxito antes de que bote en la pista, ¿para quién es el punto?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node134");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node132</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node133</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node134</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node135</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node132</NodeID>
+    <AnswerText>El punto es para ti</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node133</NodeID>
+    <AnswerText>El punto es nulo</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node134</NodeID>
+    <AnswerText>El punto es para tu rival</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node135</NodeID>
+    <AnswerText>El rival es descalificado</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node136</NodeID>
+    <AnswerText/>
+    <QuestionText>Si estás disputando un gran punto y un jugador de la pista de al lado mete una bola en tu pista, ¿qué ocurre?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node140");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node137</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node138</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node139</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node140</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node137</NodeID>
+    <AnswerText>Continúas el punto</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node138</NodeID>
+    <AnswerText>Cantas un let</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node139</NodeID>
+    <AnswerText>Tu contrincante canta un let</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node140</NodeID>
+    <AnswerText>Ninguna de las anteriores, depende de ti y tu rival</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node141</NodeID>
+    <AnswerText/>
+    <QuestionText>¿En un mismo servicio cuántas veces se permite let?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node145");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node142</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node143</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node144</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node145</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node142</NodeID>
+    <AnswerText>Un máximo de 4</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node143</NodeID>
+    <AnswerText>Un máximo de 5</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node144</NodeID>
+    <AnswerText>Un máximo de 6</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node145</NodeID>
+    <AnswerText>No hay límite</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node146</NodeID>
+    <AnswerText/>
+    <QuestionText>Si al enviarle una pelota con mucho ángulo tu rival te la devuelve por un lateral de la red sin que tú puedas alcanzarla, ¿para quién es el punto?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node150");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node147</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node148</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node149</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node150</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node147</NodeID>
+    <AnswerText>El punto es para ti</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node148</NodeID>
+    <AnswerText>Para nadie</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node149</NodeID>
+    <AnswerText>Para tu contrincante</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node150</NodeID>
+    <AnswerText>Se repite el punto</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node151</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué tipo de revés tiene su punto de contacto con la pelota a 18 pulgadas del otro revés?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node152");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node152</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node153</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node154</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node155</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node152</NodeID>
+    <AnswerText>A una mano</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node153</NodeID>
+    <AnswerText>A dos manos</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node154</NodeID>
+    <AnswerText>Sin manos</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node155</NodeID>
+    <AnswerText>Ninguna de las anteriores</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node156</NodeID>
+    <AnswerText/>
+    <QuestionText>Si en un partido de dobles uno de los rivales espera para restar en la parte izquierda de la línea de fondo, ¿cuál es la posición más fuerte para ti y tu compañero?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node159");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node157</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node158</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node159</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node160</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node157</NodeID>
+    <AnswerText>Izquierda en la red, derecha en el fondo</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node158</NodeID>
+    <AnswerText>Derecha en la red, izquierda en el fondo</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node159</NodeID>
+    <AnswerText>Ambos en la red</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node160</NodeID>
+    <AnswerText>Ambos en el fondo</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node161</NodeID>
+    <AnswerText/>
+    <QuestionText>Si juegas contra el típico jugador de saque y volea, ¿cuál de éstas es tu mejor opción para restar un saque?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node165");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node162</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node163</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node164</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node165</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node162</NodeID>
+    <AnswerText>Un globo</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node163</NodeID>
+    <AnswerText>Una dejada</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node164</NodeID>
+    <AnswerText>Un golpe a su pecho</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node165</NodeID>
+    <AnswerText>Un golpe a sus pies</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node166</NodeID>
+    <AnswerText/>
+    <QuestionText>Si respondes al revés de tu contrincante con un paralelo, ¿en qué parte de la red debes situarte para preparar la volea?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node168");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node167</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node168</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node169</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node170</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node167</NodeID>
+    <AnswerText>En el centro de la pista</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node168</NodeID>
+    <AnswerText>Ligeramente a la derecha del centro de la pista</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node169</NodeID>
+    <AnswerText>Ligeramente a la izquierda del centro de la pista</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node170</NodeID>
+    <AnswerText>Ninguna de las anteriores</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node171</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuándo es más probable que el saque se quede en la red?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node172");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node172</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node173</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node174</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node175</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node172</NodeID>
+    <AnswerText>Al lanzar la pelota demasiado adelante</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node173</NodeID>
+    <AnswerText>Al lanzar la pelota ligeramente atrás</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node174</NodeID>
+    <AnswerText>Al no dar suficiente efecto liftado</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node175</NodeID>
+    <AnswerText>Ninguna de las anteriores</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node176</NodeID>
+    <AnswerText/>
+    <QuestionText>Estás en la línea de fondo y tu contrincante te envía un golpe muy angulado obligándote a salir de la pista, él se queda en el fondo sin subir a la red ¿cuál sería tu mejor alternativa?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node179");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node177</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node178</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node179</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node180</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node177</NodeID>
+    <AnswerText>Una dejada</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node178</NodeID>
+    <AnswerText>Buscar un golpe ganador</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node179</NodeID>
+    <AnswerText>Un globo con efecto liftado</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node180</NodeID>
+    <AnswerText>Un golpe profundo normal</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node181</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué saque te da más tiempo para subir a la red y poder volear?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node183");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node182</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node183</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node184</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node185</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node182</NodeID>
+    <AnswerText>Saque cortado</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node183</NodeID>
+    <AnswerText>Saque liftado</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node184</NodeID>
+    <AnswerText>Saque plano</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node185</NodeID>
+    <AnswerText>Saque de Pete Sampras</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node186</NodeID>
+    <AnswerText/>
+    <QuestionText>Si te hacen un globo desde muy al fondo de la pista, ¿cuál sería tu mejor alternativa?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node189");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node187</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node188</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node189</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node190</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node187</NodeID>
+    <AnswerText>Dejar botar el globo e intentar un smash</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node188</NodeID>
+    <AnswerText>Dejar botar el globo y responder con un fuerte drive</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node189</NodeID>
+    <AnswerText>Hacer un smash antes de que la pelota bote</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node190</NodeID>
+    <AnswerText>Hacer una volea de derecha antes de que la pelota bote</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node191</NodeID>
+    <AnswerText/>
+    <QuestionText>Si tu contrincante es alto y hace el revés a dos manos, ¿cómo podrías contrarrestar su revés?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node194");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node192</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node193</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node194</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node195</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node192</NodeID>
+    <AnswerText>Enormes globos liftados</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node193</NodeID>
+    <AnswerText>Continuas dejadas</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node194</NodeID>
+    <AnswerText>Golpes planos cortados</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node195</NodeID>
+    <AnswerText>Golpes cortados al cuerpo</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node196</NodeID>
+    <AnswerText/>
+    <QuestionText>Si tu contrincante es bajo y hace el revés a una mano, ¿cómo podrías contrarrestar su revés?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node197");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node197</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node198</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node199</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node200</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node197</NodeID>
+    <AnswerText>Continuos golpes liftados y profundos</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node198</NodeID>
+    <AnswerText>Golpes potentes</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node199</NodeID>
+    <AnswerText>Golpes bajos cortados</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node200</NodeID>
+    <AnswerText>Golpes cruzados lejos de su alcance</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <DaText>
+    <TextID>Text00</TextID>
+    <Text>Bienvenido al Insignia Quiz</Text>
+  </DaText>
+  <DaText>
+    <TextID/>
+    <Text/>
+  </DaText>
+</QuizModel>

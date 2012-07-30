@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Grid xmlns:mx="http://www.adobe.com/2006/mxml" width="100" height="100"
+	horizontalScrollPolicy="auto" verticalScrollPolicy="off" creationComplete="OnCreationComplete()"
+	>	
+	<mx:GridRow id="myDefaultRow" verticalAlign="middle"/>
+	
+	<mx:Script>
+		<![CDATA[
+		import Model.AssetObject;
+		import Model.SceneObject;
+		
+		import mx.events.ResizeEvent;
+		import mx.core.Container;
+		import mx.core.ScrollPolicy;
+		import mx.containers.Canvas;		
+		import mx.core.DragSource;
+		import mx.core.UIComponent;		
+		import mx.containers.GridItem;
+		import mx.containers.GridRow;	
+		import mx.collections.ArrayCollection;
+		import mx.binding.utils.BindingUtils;		
+		import mx.managers.DragManager;
+		import mx.events.DragEvent;
+		
+		import utils.UIComponentWrapper;
+		import utils.GenericEvent;
+		
+		public function get SWFLibrary() : Object { return mSWFLibrary; }
+		
+		
+		public function Init(controller : EditorController, swfLibrary : Object) : void
+		{
+			mController = controller;
+			mSWFLibrary = swfLibrary;
+		}
+		
+		private function OnCreationComplete() : void
+		{
+			BindingUtils.bindSetter(OnAssetObjectSelectionChanged, mController, "SelectedAnyAssetObject");
+			
+			this.label = mSWFLibrary.Url;
+			this.addEventListener(ResizeEvent.RESIZE, OnResize, false, 0, true);
+			
+			ShowAssetObjs(mSWFLibrary.AssetObjects);
+		}
+		
+		private function OnResize(event:ResizeEvent):void
+		{
+			for (var c:int = 0; c < myDefaultRow.numChildren; c++)
+			{
+				var item : GridItem = myDefaultRow.getChildAt(c) as GridItem;
+				
+				var innerContainer : Canvas = item.getChildAt(0) as Canvas; 
+				var mcHeight : Number = (innerContainer.getChildAt(0) as DisplayObjectContainer).getChildAt(0).height;
+				
+				ScaleContainer(innerContainer, mcHeight);
+			}
+		}
+		
+		// Reescalamos el contenedor del movieclip para que aunque el movieclip sea más alto que nosotros, se vea entero
+		private function ScaleContainer(innerContainer:Canvas, mcHeight:Number):void
+		{
+			if (mcHeight > this.height-5)
+			{
+				var factor : Number = (this.height-5) / mcHeight;
+				innerContainer.scaleX = factor;
+				innerContainer.scaleY = factor;
+					
+				innerContainer.setStyle("borderThickness", 1 / factor);
+			}
+			else
+			{
+				innerContainer.scaleX = 1;
+				innerContainer.scaleY = 1;
+					
+				innerContainer.setStyle("borderThickness", 1);
+			}
+		}
+		
+		private function OnAssetObjectSelectionChanged(newObj : AssetObject):void
+		{
+			if (newObj == null || mController.SelectedSceneObject != null)
+				Deselect();
+		}
+		
+		private function Deselect() : void
+		{
+			if (mSelectedGridItem != null)
+			{
+				(mSelectedGridItem.getChildAt(0) as Container).setStyle("borderColor", "white");
+				mSelectedGridItem = null;
+			}	
+		}
+		
+		private function ShowAssetObjs(assetObjs : ArrayCollection):void
+		{	
+			myDefaultRow.removeAllChildren();
+			mSelectedGridItem = null;
+			
+			for (var c : int = 0; c < assetObjs.length; c++)
+			{
+				var name : String = assetObjs[c].TheDefaultGameComponent.MovieClipName;
+				var mc : DisplayObject = mController.TheGameModel.TheAssetLibrary.CreateMovieClip(name);
+				var item : GridItem = new GridItem();
+											 
+				var bounds : Rectangle = mc.getBounds(mc);
+				mc.x = -bounds.left;
+				mc.y = -bounds.top;
+				
+				// Usamos un contenedor intermedio para que el highlight del borde se vea justo al tamaño del movieclip,
+				// y no del height total del padre (el grid resizea a todos sus hijos al tamaño máximo)
+				var innerContainer : Canvas = new Canvas();
+				innerContainer.addChild(new UIComponentWrapper(mc));
+				
+				// Usamos los bounds y no mc.width para que contenga los strokes & shapes
+				innerContainer.width = bounds.width+2;	// TODO: No entiendo el +2?
+				innerContainer.height = bounds.height+2;
+				
+				// Reescalamos para que aunque el movieclip sea más alto que nosotros, se vea entero	
+				ScaleContainer(innerContainer, mc.height);
+								
+				innerContainer.verticalScrollPolicy = ScrollPolicy.OFF;
+				innerContainer.horizontalScrollPolicy = ScrollPolicy.OFF;
+				item.addChild(innerContainer);
+				
+				myDefaultRow.addChild(item);
+
+				innerContainer.setStyle("borderColor", "white");
+				innerContainer.setStyle("borderStyle", "solid");
+				
+				item.data = assetObjs[c];
+				
+				stage.addEventListener(MouseEvent.MOUSE_MOVE, OnStageMove);
+				
+				item.addEventListener(MouseEvent.MOUSE_OVER, OnItemOver);
+				item.addEventListener(MouseEvent.MOUSE_OUT, OnItemOut);
+				item.addEventListener(MouseEvent.MOUSE_DOWN, OnItemDown);
+			}
+		}
+		
+		private function OnStageMove(event:MouseEvent):void
+		{
+			if (mIsDownForDrag && (mSelectedGridItem != null))
+			{
+				if (!DragManager.isDragging)
+				{
+					var initiator : UIComponent = new UIComponent();
+					initiator.systemManager = mSelectedGridItem.systemManager;
+					
+					var ds : DragSource = new DragSource();
+					ds.addData(mSelectedGridItem.data.TheDefaultGameComponent.MovieClipName, "MovieClipName");
+					DragManager.doDrag(initiator, ds, event);
+				}
+			}
+
+			mIsDownForDrag = false;
+		}
+		
+		private function OnItemOut(event:MouseEvent):void
+		{
+			var gridItem : GridItem = event.currentTarget as GridItem;
+						
+			if (mSelectedGridItem != gridItem)
+				(gridItem.getChildAt(0) as Container).setStyle("borderColor", "white");
+			else
+				(gridItem.getChildAt(0) as Container).setStyle("borderColor", "black");
+		}
+		
+		private function OnItemOver(event:MouseEvent):void
+		{
+			var gridItem : GridItem = event.currentTarget as GridItem;			
+			(gridItem.getChildAt(0) as Container).setStyle("borderColor", "red");
+		}
+		
+		private function OnItemDown(event:MouseEvent):void
+		{
+			var gridItem : GridItem = event.currentTarget as GridItem;			
+			(gridItem.getChildAt(0) as Container).setStyle("borderColor", "black");
+			
+			if (mSelectedGridItem != null && mSelectedGridItem != gridItem)
+				(mSelectedGridItem.getChildAt(0) as Container).setStyle("borderColor", "white");
+			mSelectedGridItem = gridItem;
+			mController.SelectedAssetObject = event.currentTarget.data;			
+			
+			mIsDownForDrag = true;
+		}
+		
+		private var mIsDownForDrag : Boolean = false;
+		private var mSelectedGridItem : GridItem;	
+				
+		private var mController : EditorController;
+		private var mSWFLibrary : Object;	// El SWF que llevamos nosotros
+		]]>
+
+	</mx:Script>
+</mx:Grid>

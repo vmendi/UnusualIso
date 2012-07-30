@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:ControlBar xmlns:mx="http://www.adobe.com/2006/mxml" 
+	left="0" right="0" paddingTop="0" paddingBottom="0" 
+	paddingLeft="0" paddingRight="0" horizontalGap="12" width="100%" height="21" y="0">
+
+<mx:MenuBar id="myObjectEditorBarMenu" dataProvider="{GameCompMenuXML}" labelField="@label"
+	itemClick="OnGameComponentsMenuClick(event);" showRoot="false" width="100%" height="19" left="0" right="0">	
+</mx:MenuBar>
+
+		
+<mx:XML id="GameCompMenuXML" xmlns="">
+	<RootEntry label="Componentes">
+		<AddEntry label="Añadir" command="AddGameComponent"/>
+		<RemoveEntry label="Quitar" command="RemoveGameComponent"/>
+		<Copy label="Copiar">		
+			<CopyToAll label="Copiar a escena" command="CopyToAll"/>
+		</Copy>
+	</RootEntry>
+</mx:XML>	
+
+
+<mx:Script>
+	<![CDATA[
+	import Model.SceneObject;
+	import Model.AssetObject;
+	
+	import mx.binding.utils.ChangeWatcher;
+	import mx.binding.utils.BindingUtils;	
+	import mx.collections.ArrayCollection;
+	import mx.controls.Menu;
+	import mx.events.MenuEvent;
+	
+	public function Init(controller : EditorController) : void
+	{
+		mController = controller;
+		
+        BindingUtils.bindSetter(OnObjectSelectionChanged, mController, "SelectedAnyAssetObject");
+	}
+	
+	
+	private function OnObjectSelectionChanged(newObj : AssetObject):void
+	{
+		if (mGameComponentsWatcher != null)
+		{
+			mGameComponentsWatcher.unwatch();
+			mGameComponentsWatcher = null;
+		}
+
+		if (newObj != null)
+		{
+			mGameComponentsWatcher = BindingUtils.bindSetter(OnGameComponentsChanged, newObj, "TheGameComponents");
+		}
+		else
+		{
+			myObjectEditorBarMenu.dataProvider = <RootEntry label="Componentes"><EmptyEntry label="No selection"/></RootEntry>;
+		}
+	}
+	
+	private function OnGameComponentsChanged(gameComps : ArrayCollection) : void
+	{
+		var addComponents : ArrayCollection = mController.GetAddComponentsForSelectedAssetObject();
+
+		var theXML : XML = new XML(GameCompMenuXML);
+		
+		for (var c:int = 0; c < addComponents.length; c++)
+		{
+			var menuEntry : XML = <menuitem 
+								  label={addComponents[c].ShortName}
+								  fullName={addComponents[c].FullName}
+								  command="Add">
+								  </menuitem>
+								  
+			var middleNamespace : String = addComponents[c].MiddleNamespace;
+			
+			if (middleNamespace != "")
+			{
+				var subMenuEntry : XML = <menuitem label={middleNamespace} />
+				var subMenu : XMLList = theXML.AddEntry.menuitem.(@label==middleNamespace);
+				
+				if (subMenu.length() == 0)
+				{					
+					theXML.AddEntry.appendChild(subMenuEntry);
+					subMenu = theXML.AddEntry.menuitem.(@label==middleNamespace);
+				}
+				
+				subMenu.appendChild(menuEntry);
+			}
+			else
+				theXML.AddEntry.appendChild(menuEntry);	
+		}
+		
+		var removeComponents : ArrayCollection = mController.GetRemoveComponentsForSelectedAssetObject();
+		
+		for (c = 0; c < removeComponents.length; c++)
+		{
+			menuEntry = <menuitem 
+							label={removeComponents[c].ShortName}
+							fullName={removeComponents[c].FullName}
+							command="Remove">
+					    </menuitem>
+			theXML.RemoveEntry.appendChild(menuEntry);
+		}
+
+		myObjectEditorBarMenu.dataProvider = theXML;
+			
+		/*
+			WARNING: Provoca efectos secundarios, como que hay q clickar dos veces la segunda vez!!!
+		for (c=0; c < 3; c++)
+		{
+			myObjectEditorBarMenu.getMenuAt(c).setStyle("openDuration", "100");
+		}
+		*/
+	}
+
+	
+	private function OnGameComponentsMenuClick(event:MenuEvent):void
+	{
+		var list : XMLList = event.item.attribute("fullName");
+		if (list.toString().length != 0)
+		{
+			if (event.item.@command == "Add") 
+				mController.AddComponentToSelectedAssetObject(event.item.@fullName);
+			else
+			if (event.item.@command == "Remove")
+				mController.RemoveComponentToSelectedAssetObject(event.item.@fullName);
+		}
+		else
+		if (event.item.@command == "CopyToAll")
+			mController.CopyAssetObjectSelectedToAll();
+	}
+	
+
+	private var mController : EditorController;
+	private var mGameComponentsWatcher : ChangeWatcher;
+
+	]]>
+</mx:Script>
+
+</mx:ControlBar>
+
+
+<!--
+<mx:Button
+	upSkin="@Embed(source='EmbeddedAssets/add-16x16.png')"
+    overSkin="@Embed(source='EmbeddedAssets/add-16x16_over.png')"
+    downSkin="@Embed(source='EmbeddedAssets/add-16x16_down.png')"
+    disabledSkin="@Embed(source='EmbeddedAssets/add-16x16_disabled.png')"
+	y="0" click="OnAddClick(event)"/>
+	
+<mx:Button
+	upSkin="@Embed(source='EmbeddedAssets/delete-16x16.png')"
+    overSkin="@Embed(source='EmbeddedAssets/delete-16x16_over.png')"
+    downSkin="@Embed(source='EmbeddedAssets/delete-16x16_down.png')"
+    disabledSkin="@Embed(source='EmbeddedAssets/delete-16x16_disabled.png')"
+	y="0" click="OnDeleteClick(event)" enabled="false"/>
+-->
+
+<!--
+	<menuitem type="separator"/>
+-->

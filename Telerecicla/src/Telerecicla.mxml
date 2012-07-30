@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+				layout="absolute" backgroundColor="0xFFFFFF" backgroundGradientColors="[]"
+				frameRate="30"
+				width="785" height="530"
+				addedToStage="OnAddedToStage();"
+				removedFromStage="OnRemovedFromStage();"
+				preloader="ProgressPreloader">
+
+	<mx:Script>
+		<![CDATA[
+		import mx.utils.URLUtil;
+		import mx.controls.Button;
+		import mx.controls.TextArea;
+
+		import mx.controls.Alert;
+		import mx.controls.TextInput;
+		import utils.UIComponentWrapper;
+		import utils.FPSCounter;
+		import utils.KeyboardHandler;
+		import flash.events.Event;
+		import Model.*;
+
+		protected function OnRemovedFromStage() : void
+		{
+			if (mIsoEngine != null)
+			{
+				mIsoEngine.TheGameModel.StopGame();
+				mIsoEngine = null;
+
+				KeyboardHandler.ShutDown();
+			}
+		}
+
+		protected function OnAddedToStage() : void
+		{
+			KeyboardHandler.Init(stage);
+			//FPSCounter.Init(stage, new Point(0, 0));
+
+			myProgressBar.x = this.width * 0.5;
+			myProgressBar.y = this.height * 0.5;
+			(myProgressBar.content as MovieClip).gotoAndStop(0);
+
+			mIsoEngine = new IsoEngine(this);
+			mIsoEngine.TheCentralLoader.addEventListener("LoadStart", OnLoadStart, false, 0, true);
+			mIsoEngine.TheCentralLoader.addEventListener(ProgressEvent.PROGRESS, OnProgress, false, 0, true);
+			mIsoEngine.TheCentralLoader.addEventListener("LoadComplete", OnLoadComplete, false, 0, true);
+
+			// Si el parámetro no existe, devuelve 0
+			var gameID : int = parseInt(Application.application.parameters["GameID"] as String);
+
+			if (gameID == 0) gameID = 1;
+			if (gameID == 5) this.width = 760;
+
+			var gameMaps : Array = [ "Maps/Telerecicla/Ecotrivial.xml", "Maps/Telerecicla/Hidden.xml",
+									 "Maps/Telerecicla/Caminos.xml", "Maps/Telerecicla/Amarillo.xml",
+									 "Maps/Telerecicla/Amarillo.xml" ];
+
+			if (Security.sandboxType == Security.REMOTE)
+			{
+				var noSWFUrl : String = Application.application.url;
+				noSWFUrl = noSWFUrl.substr(0, noSWFUrl.lastIndexOf("/")+1);
+				IsoEngine.BaseUrl = noSWFUrl;
+			}
+
+			mIsoEngine.GameDef.GameID = gameID;
+			
+			/* NO SERVER FIX
+			mIsoEngine.GameDef.F2FCommunicate = new F2FCommunicate(this, gameID);
+
+			mIsoEngine.GameDef.F2FCommunicate.addEventListener("ServerConnected", OnServerConnected);
+			mIsoEngine.GameDef.F2FCommunicate.addEventListener("ServerError", OnServerError);
+			*/
+
+			mIsoEngine.Load(gameMaps[gameID-1]);
+		}
+
+		private function OnServerConnected(event:Event):void
+		{
+		}
+
+		private function OnServerError(event:Event):void
+		{
+			Alert.show("Error de conexión con el servidor", "Error", Alert.OK);
+		}
+
+
+		private function OnLoadComplete(event:Event) : void
+		{
+			myProgressBar.visible = false;
+
+			/*
+			this.height += 80;
+			this.setChildIndex(myTA, this.numChildren-1);
+			*/
+		}
+
+
+		private function OnLoadStart(event:Event):void
+		{
+			myProgressBar.visible = true;
+			(myProgressBar.content as MovieClip).gotoAndStop(0);
+		}
+
+		private function OnProgress(event:ProgressEvent) : void
+		{
+			var percent : int = Math.floor((event.bytesLoaded/event.bytesTotal*100));
+			(myProgressBar.content as MovieClip).gotoAndStop(percent);
+
+			//trace(event.bytesLoaded + " of " + event.bytesTotal + "; " + percent + "%");
+		}
+
+		private var mIsoEngine : IsoEngine;
+
+		]]>
+	</mx:Script>
+
+	<!-- <mx:TextArea id="myTA" width="200" height="40" verticalScrollPolicy="on" /> -->
+
+	<mx:SWFLoader id="myProgressBar" scaleContent="false" source="@Embed(source='Embedded/Loading.swf', symbol='mcLoading')"/>
+
+</mx:Application>

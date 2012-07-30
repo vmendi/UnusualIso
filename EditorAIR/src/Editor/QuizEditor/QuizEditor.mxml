@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:QuizEditor="Editor.QuizEditor.*" width="100%" height="100%"
+	creationComplete="OnCreationComplete(event)"
+	>
+	
+	<mx:Script>
+		<![CDATA[
+			import Quiz.DEvalHelper;
+			import mx.binding.utils.BindingUtils;
+			import Quiz.QuizNode;
+			import flexlib.containers.WindowShade;
+			import Editor.IWindowHelper;
+			import Editor.ILoadSaveHelper;
+			import Quiz.QuizModel;
+			
+			public function Init(loadSaveHelper : ILoadSaveHelper, windowHelper : IWindowHelper) : void
+			{
+				mQuizEditorController = new QuizEditorController(loadSaveHelper);
+				mWindowHelper = windowHelper;
+			}
+			
+			private function OnCreationComplete(event:Event):void
+			{
+				myQuizMenuBar.Init(mQuizEditorController);
+				
+				// Abrimos junto a nosotros el editor de textos
+				var textsEditor : TextsEditor = new TextsEditor();
+				textsEditor.Init(mQuizEditorController, mWindowHelper);				
+				mWindowHelper.OpenWindowDocked("Texts Editor", 250, 0, textsEditor, this.parent, "DockToRight", 30, 0);
+				
+				myNodes.addEventListener("SelectedNodeChanged", OnSelectedNodeChanged, false, 0, true);
+				
+				BindingUtils.bindSetter(OnEnterChanged, myEnterText, "text");
+				BindingUtils.bindSetter(OnConditionChanged, myConditionText, "text");
+				BindingUtils.bindSetter(OnExitChanged, myExitText, "text");        		        		
+			}
+			
+			private function OnEnterChanged(newText:String):void
+			{
+				if (myNodes.selectedItem != null)
+	        	{
+	        		myNodes.selectedItem.EnterCode = myEnterText.text;
+	        		
+	        		// Comprobación de que el código es válido
+	        		if (!DEvalHelper.IsValidCode(myNodes.selectedItem.EnterCode))
+	        			myEnterWarningIcon.visible = true;
+	        		else
+	        			myEnterWarningIcon.visible = false;
+	        	}
+	        	else
+	        	{
+	        		myEnterWarningIcon.visible = false;
+	        	}	
+			}
+			
+			
+			private function OnConditionChanged(newText:String):void
+			{
+				if (myNodes.selectedItem != null)
+	        	{
+	        		myNodes.selectedItem.ConditionCode = myConditionText.text;
+	        		
+	        		if (!DEvalHelper.IsValidCode(myNodes.selectedItem.ConditionCode))
+	        			myConditionWarningIcon.visible = true;
+	        		else
+	        			myConditionWarningIcon.visible = false;
+	        	}
+	        	else
+	        	{
+	        		myConditionWarningIcon.visible = false;
+	        	}
+			}
+			
+			private function OnExitChanged(newText:String):void
+			{
+				if (myNodes.selectedItem != null)
+	        	{
+	        		myNodes.selectedItem.ExitCode = myExitText.text;
+	        		
+	        		if (!DEvalHelper.IsValidCode(myNodes.selectedItem.ExitCode))
+	        			myExitWarningIcon.visible = true;
+	        		else
+	        			myExitWarningIcon.visible = false;
+	        	}
+	        	else
+	        	{
+	        		myExitWarningIcon.visible = false;
+	        	}
+			}
+			
+			private function OnSelectedNodeChanged(event:Event):void
+			{
+				mQuizEditorController.SelectedNode = myNodes.selectedItem as QuizNode;
+				
+				if (mQuizEditorController.SelectedNode != null)
+				{
+		        	myEnterText.text = mQuizEditorController.SelectedNode.EnterCode;
+		        	myEnterTextPanel.alpha = 1.0;
+		        	myEnterText.editable = true;
+		        	
+		        	myConditionText.text = mQuizEditorController.SelectedNode.ConditionCode;
+		        	myConditionTextPanel.alpha = 1.0;
+		        	myConditionText.editable = true;
+		        	
+		        	myExitText.text = mQuizEditorController.SelectedNode.ExitCode;
+		        	myExitTextPanel.alpha = 1.0;
+		        	myExitText.editable = true;
+		        }
+		        else
+		        {
+		        	myEnterText.text = "";
+		        	myEnterTextPanel.alpha = 0.5;
+		        	myEnterText.editable = false;
+		        	
+		        	myConditionText.text = "";
+		        	myConditionTextPanel.alpha = 0.5;
+		        	myConditionText.editable = false;
+		        	
+		        	myExitText.text = "";
+		        	myExitTextPanel.alpha = 0.5;
+		        	myExitText.editable = false;
+		        }								
+			}
+			
+			
+			[Bindable]
+			private var mQuizEditorController : QuizEditorController;
+			private var mWindowHelper : IWindowHelper;
+			
+		]]>
+	</mx:Script>
+
+	<QuizEditor:QuizMenuBar width="100%" height="20" id="myQuizMenuBar"></QuizEditor:QuizMenuBar>
+	
+	<mx:VDividedBox width="100%" top="20" bottom="0">
+	
+		<QuizEditor:NodesDataGrid id="myNodes" width="100%" height="70%" TheQuizModel="{mQuizEditorController.TheQuizModel}" 
+								  dataProvider="{mQuizEditorController.TheQuizModel.Nodes}"/>
+	        	
+	    <mx:HDividedBox x="0" y="814" width="100%" height="30%">
+	        <mx:Panel id="myEnterTextPanel" width="33%" height="100%" layout="absolute" title="Entrada" horizontalScrollPolicy="off" verticalScrollPolicy="off" dropShadowEnabled="false" alpha="0.5">
+	        	<mx:TextArea id="myEnterText" x="0" y="0" width="100%" height="100%"/>
+	        	<mx:Image x="245" right="1" y="1" source="@Embed(source='EmbeddedAssets/WarningIcon.jpg')" id="myEnterWarningIcon" visible="false"/>
+	        </mx:Panel>
+	        <mx:Panel id="myConditionTextPanel" y="0" width="33%" height="100%" layout="absolute" title="Condición de visibilidad" horizontalScrollPolicy="off" verticalScrollPolicy="off" dropShadowEnabled="false" alpha="0.5" x="342.5">
+	    		<mx:TextArea id="myConditionText" x="0" y="0" width="100%" height="100%"/>
+	    		<mx:Image x="245" right="1" y="1" source="@Embed(source='EmbeddedAssets/WarningIcon.jpg')" id="myConditionWarningIcon" visible="false"/>
+		    </mx:Panel>
+	    	<mx:Panel id="myExitTextPanel" x="687.5" y="0" width="33%" height="100%" layout="absolute" title="Salida" horizontalScrollPolicy="off" verticalScrollPolicy="off" dropShadowEnabled="false" alpha="0.5">
+	        	<mx:TextArea id="myExitText" x="0" y="0" width="100%" height="100%"/>
+	        	<mx:Image x="245" right="1" y="1" source="@Embed(source='EmbeddedAssets/WarningIcon.jpg')" id="myExitWarningIcon" visible="false"/>
+	    	</mx:Panel>
+		</mx:HDividedBox>
+		
+	</mx:VDividedBox>
+		
+</mx:Canvas>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:DataGrid xmlns:mx="http://www.adobe.com/2006/mxml"
+    editable="true"
+    themeColor="#B1E1FF"
+	doubleClickEnabled="true"
+	doubleClick="OnDoubleClick(event);"
+	dropEnabled="true"	
+	sortableColumns="false"
+    creationComplete="OnCreationComplete()"
+	itemEditBeginning="DisableEditing(event);"
+	dragDrop="OnDrop(event);"
+	itemRollOver="OnItemRollOver(event);"
+	itemRollOut="OnItemRollOut(event);"
+	dragEnter="OnDragEnter(event);"
+	dragOver="OnDragOver(event)"
+    >
+    
+    <mx:Script>
+    	<![CDATA[
+    	import mx.controls.listClasses.IListItemRenderer;
+     	import mx.events.DragEvent;
+		import mx.managers.DragManager;
+        import mx.core.DragSource;
+    	import mx.collections.ArrayCollection;
+        import mx.controls.Menu;
+        import mx.events.DataGridEvent;
+        import mx.events.ListEvent;
+        
+        import Quiz.QuizModel;
+    
+        public function set TheQuizModel(val : QuizModel):void { mQuizModel = val; }
+        public function get TheQuizModel() : QuizModel { return mQuizModel; }
+        
+        
+        private function OnCreationComplete():void
+        {
+            mContextMenu = new ContextMenu();
+            mContextMenu.hideBuiltInItems();
+            
+            mContextMenu.addEventListener(ContextMenuEvent.MENU_SELECT, OnMenuSelected);
+            
+            this.contextMenu = mContextMenu;
+            
+            CreateMenuItems();
+        }
+        
+        
+        protected virtual function CreateMenuItems() : void
+        {
+        }
+        
+        private function OnDragOver(event:DragEvent):void
+        {
+        	event.preventDefault();	
+        }
+        
+        private function OnItemRollOut(event:ListEvent):void
+        {
+        	mLastRollOverIndex = null;
+        }
+        
+        private function DisableEditing(event:DataGridEvent):void
+        {
+        	mLastTriedEditionItem = { columnIndex:event.columnIndex, rowIndex:event.rowIndex };
+			event.preventDefault();
+        }
+        
+        private function OnDoubleClick(event:MouseEvent):void
+        {
+        	if (mouseEventToItemRenderer(event) == null)
+        		ProcessDoubleClickOnEmptyRegion();
+        	else
+        		editedItemPosition = mLastTriedEditionItem;
+        } 
+        
+        private function OnDragEnter(event:DragEvent):void
+        {
+           	event.preventDefault();
+           	DragManager.acceptDragDrop(this);
+        }
+        
+        private function OnDrop(event:DragEvent):void
+        {
+        	dragExitHandler(event);
+        	event.preventDefault();
+                	
+        	this.hideDropFeedback(event);
+		
+			// Para que cuando nos llegue el OnItemRollOver todavía esté seleccionado lo mismo que ahora
+			if (event.dragInitiator is CommonDataGrid)
+			{	
+				(event.dragInitiator as CommonDataGrid).mSupressSelectionChange = true;
+			}
+			
+			mWantDropOnRollOver = true;
+			mDragEvent = event;
+        }
+          
+		protected override function dragCompleteHandler(event:DragEvent):void
+		{
+			super.dragCompleteHandler(event);
+			this.selectedIndex = mLastIdxSelected;
+		}
+   		
+
+		protected override function mouseDownHandler(event:MouseEvent):void
+		{
+			mLastIdxSelected = this.selectedIndex;
+			super.mouseDownHandler(event);
+		}	
+        
+		private function OnItemRollOver(event:ListEvent):void
+		{
+			mLastRollOverIndex = { rowIndex:event.rowIndex, columnIndex:event.columnIndex };
+        	
+			if (mWantDropOnRollOver)
+			{
+				DropOnRollOver(mDragEvent, mLastRollOverIndex);
+				
+				if (mDragEvent.dragInitiator is CommonDataGrid)
+				{
+					(mDragEvent.dragInitiator as CommonDataGrid).mSupressSelectionChange = false;
+					(mDragEvent.dragInitiator as CommonDataGrid).RefreshSelection();
+				}
+				   
+				mWantDropOnRollOver = false;
+				mDragEvent = null;
+				    	        		
+				this.updateList();
+			}
+        }
+   
+        protected virtual function DropOnRollOver(event : DragEvent, lastRollOver : Object) : void
+        {
+        }
+        
+        private function OnMenuSelected(event:ContextMenuEvent) : void
+        {
+        	if (mLastRollOverIndex != null)
+        		selectedIndex = mLastRollOverIndex.rowIndex;
+        }
+    
+        protected virtual function RefreshSelection() : void
+        {
+        }
+        
+        protected virtual function ProcessDoubleClickOnEmptyRegion() : void
+        {
+        }
+      	
+      	protected var mContextMenu : ContextMenu;				
+		protected var mSupressSelectionChange : Boolean = false;
+        private   var mLastIdxSelected : int = -1;
+		
+        private var mLastRollOverIndex : Object = null;        
+        private var mLastTriedEditionItem : Object;
+        private var mWantDropOnRollOver : Boolean = false;
+        private var mDragEvent : DragEvent = null;
+    		
+    	private var mQuizModel : QuizModel;
+    	]]>
+    </mx:Script>
+    
+    
+</mx:DataGrid>

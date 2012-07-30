@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="100%" height="100%"
+	verticalScrollPolicy="off" horizontalScrollPolicy="off"
+	creationComplete="OnCreationComplete();"
+	xmlns:Editor="Editor.*" implements="mx.managers.IFocusManagerComponent">
+	
+	<mx:Script>
+		<![CDATA[
+		import mx.binding.utils.BindingUtils;
+		import mx.core.IUIComponent;
+		import mx.managers.DragManager;
+		import mx.events.DragEvent;
+		import utils.GenericEvent;
+		import mx.core.UIComponent;
+		import mx.events.ListEvent;
+		import mx.collections.ArrayCollection;
+								
+		import Model.*;
+		import utils.Point3;
+		
+		public function Init(contr : EditorController, windowHelper:IWindowHelper) : void
+		{ 
+			mGameModel = contr.TheGameModel;
+			mController = contr;
+			mWindowHelper = windowHelper;
+		}
+		
+		protected function OnCreationComplete() : void
+		{
+			myTopMenuBar.Init(mController, mWindowHelper);
+			myAssetObjectInspector.Init(mController);
+			myAssetObjectsLibrary.Init(mController);
+		
+			// El detach no hará falta pq al irnos nosotros el gamemodel se entera y se autoremueve	
+			mGameModel.AttachToRenderCanvas(myCanvas);
+
+			// Control del movimiento del ratón y del drag
+			myCanvas.addEventListener(MouseEvent.MOUSE_MOVE, OnMouseMove, false, 0, true);
+			myCanvas.addEventListener(MouseEvent.CLICK, OnMouseClick, false, 0, true);
+			myCanvas.addEventListener(MouseEvent.MOUSE_DOWN, OnMouseDown, false, 0, true);
+			
+			// El Up lo cogemos mejor de la stage, para no perderlo
+			stage.addEventListener(MouseEvent.MOUSE_UP, OnMouseUp, false, 0, true);
+						
+			myCanvas.addEventListener(DragEvent.DRAG_ENTER, OnCanvasDragEnter, false, 0, true);
+			myCanvas.addEventListener(DragEvent.DRAG_OVER, OnCanvasDragOver, false, 0, true);
+			myCanvas.addEventListener(DragEvent.DRAG_DROP, OnCanvasDragDrop, false, 0, true);
+			myCanvas.addEventListener(DragEvent.DRAG_EXIT, OnCanvasDragExit, false, 0, true);
+			
+			myCanvas.addEventListener(KeyboardEvent.KEY_DOWN, OnKeyDown, false, 0, true);
+		}
+		
+
+		private function OnKeyDown(event:KeyboardEvent):void
+		{
+			if (event.keyCode == Keyboard.SPACE)
+				mController.OnSpacePressed();
+			else
+			if (event.keyCode == Keyboard.DELETE)
+				mController.OnDeletePressed();
+		}
+		
+		private function OnMouseClick(event:MouseEvent) : void
+		{
+			mController.OnMouseClick(globalToContent(new Point(event.stageX, event.stageY)), 
+									 new Point(event.stageX, event.stageY));
+		}
+		
+		private function OnMouseDown(event:MouseEvent) : void
+		{
+			mController.OnMouseDown(globalToContent(new Point(event.stageX, event.stageY)), 
+									new Point(event.stageX, event.stageY));
+			myCanvas.setFocus();
+		}
+		
+		private function OnMouseUp(event:MouseEvent) : void
+		{
+			mController.OnMouseUp(globalToContent(new Point(event.stageX, event.stageY)), 
+								  new Point(event.stageX, event.stageY));
+		}
+		
+		private function OnCanvasDragEnter(event:DragEvent):void
+		{
+			if (event.dragSource.hasFormat("MovieClipName"))
+			{
+				var mcName : String = event.dragSource.dataForFormat("MovieClipName") as String;
+				
+				if (mController.DropAssetObjectStart(mcName))
+				{
+					DragManager.acceptDragDrop(event.currentTarget as IUIComponent);
+					
+					mController.OnMouseMove(globalToContent(new Point(event.stageX, event.stageY)), 
+											new Point(event.stageX, event.stageY), true);
+				}
+			}
+		}
+		
+		private function OnCanvasDragOver(event:DragEvent):void
+		{
+			mController.OnMouseMove(globalToContent(new Point(event.stageX, event.stageY)), 
+									new Point(event.stageX, event.stageY), true);
+		}
+		
+		private function OnCanvasDragDrop(event:DragEvent):void
+		{
+			mController.DropAssetObjectEnd(true);
+		}
+		
+		private function OnCanvasDragExit(event:DragEvent):void
+		{
+			mController.DropAssetObjectEnd(false);
+		}
+		
+		private function OnMouseMove(event:MouseEvent):void
+		{
+			mController.OnMouseMove(globalToContent(new Point(event.stageX, event.stageY)), 
+									new Point(event.stageX, event.stageY), event.buttonDown);
+		}
+
+		
+		private var mController : EditorController;	
+		private var mGameModel : GameModel;
+		private var mWindowHelper : IWindowHelper;
+		]]>
+	</mx:Script>
+
+
+	<mx:VDividedBox left="0" right="0" top="0" bottom="0" liveDragging="true">	
+		<mx:HDividedBox width="100%" height="80%" liveDragging="true" minHeight="300">
+			<mx:VBox width="76%" height="100%" verticalGap="0" horizontalScrollPolicy="off" verticalScrollPolicy="off" minWidth="300">
+				<Editor:TopMenuBar id="myTopMenuBar" width="100%" y="0" height="20"></Editor:TopMenuBar>
+				<mx:Canvas id="myCanvas" width="100%" height="100%" y="20" borderStyle="solid" borderColor="#000000"
+					horizontalScrollPolicy="off" verticalScrollPolicy="off" clipContent="true" >
+					<!-- Añadimos un componente que fuerza a que el clipping este siempre activo -->					
+					<mx:UIComponent x="-1" y="-1" />
+				</mx:Canvas>
+			</mx:VBox>
+			<mx:Canvas height="100%" width="24%" horizontalScrollPolicy="off" verticalScrollPolicy="auto">
+				<Editor:ObjectEditor width="100%" id="myAssetObjectInspector"/>	
+			</mx:Canvas>
+		</mx:HDividedBox>
+	
+		<Editor:AssetObjectLibrary id="myAssetObjectsLibrary" bottom="0" width="100%" height="20%">
+		</Editor:AssetObjectLibrary>	
+	</mx:VDividedBox>
+	
+</mx:Canvas>

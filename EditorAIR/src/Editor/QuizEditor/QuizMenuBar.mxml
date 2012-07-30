@@ -1,0 +1,36 @@
+<mx:MenuBar xmlns:mx="http://www.adobe.com/2006/mxml" dataProvider="{QuizMenuBarData}" 
+	labelField="@label" showRoot="false" itemClick="OnItemClick(event);"  >
+
+<mx:XML id="QuizMenuBarData" xmlns="">
+<menuitem label="Menu">
+	<menuitem label="Archivo">
+		<menuitem label="Nuevo" command="New"/>
+	    <menuitem label="Abrir..." command="Open"/>
+	    <menuitem label="Grabar" command="Save"/>
+	    <menuitem label="Grabar como..." command="SaveAs"/>
+	    <menuitem type="separator"/>
+	</menuitem>
+</menuitem>
+</mx:XML>
+
+<mx:Script>
+	<![CDATA[
+		
+	import mx.events.MenuEvent;
+	
+	public function Init(controller : QuizEditorController) : void
+	{
+		mController = controller;
+	}	
+	
+	protected function OnItemClick(event:MenuEvent) : void
+	{
+		mController[event.item.@command]();	
+	}
+
+	private var mController : QuizEditorController;
+	
+	]]>
+</mx:Script>
+
+</mx:MenuBar>

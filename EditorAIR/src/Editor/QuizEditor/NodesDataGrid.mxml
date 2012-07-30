@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuizEditor:CommonDataGrid xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:QuizEditor="Editor.QuizEditor.*"
+	dragEnabled="true"
+	dragMoveEnabled="false" 
+	draggableColumns="false"
+	change="OnSelectedChange(event)"
+	allowDragSelection="false"
+	>
+	
+	<QuizEditor:columns>
+		<mx:DataGridColumn headerText="Nombre" dataField="NodeID" width="100"/>
+		<mx:DataGridColumn headerText="Respuesta" dataField="AnswerText" width="200"/>
+	    <mx:DataGridColumn headerText="Pregunta" dataField="QuestionText" width="200"/>
+	    <!--
+	    <mx:DataGridColumn headerText="EnterMovieClip" dataField="EnterMovieClipName" width="200"/>
+	    <mx:DataGridColumn headerText="IdleMovieClip" dataField="IdleMovieClipName" width="200"/>
+	    -->
+	    <mx:DataGridColumn headerText="Salidas" dataField="AnswersString" width="200"/>
+	</QuizEditor:columns>    
+    
+    <mx:Script>
+    <![CDATA[
+    	import Quiz.QuizNode;
+    	import mx.events.IndexChangedEvent;
+    	import mx.events.ListEvent;
+        import mx.events.DragEvent;
+    	import mx.collections.ArrayCollection;
+        import mx.controls.Menu;
+        
+                
+        protected override function DropOnRollOver(event : DragEvent, lastRollOver : Object) : void
+        {
+   		    var itemsArray:Array = event.dragSource.dataForFormat("items") as Array;
+   		    
+   		    if (itemsArray[0].hasOwnProperty("FileName"))
+   		    {
+	        	var fileName : String = itemsArray[0].FileName;
+    	    	        		
+        		var dropOnObjectIdx : int = this.indicesToIndex(lastRollOver.rowIndex, lastRollOver.columnIndex);
+				var daField : String = this.columns[lastRollOver.columnIndex].dataField;
+
+				TheQuizModel.Nodes[dropOnObjectIdx][daField] = fileName;
+        	}
+        	else
+        	if (itemsArray[0].hasOwnProperty("TextID"))
+        	{
+        		dropOnObjectIdx = this.indicesToIndex(lastRollOver.rowIndex, lastRollOver.columnIndex);
+				daField = this.columns[lastRollOver.columnIndex].dataField;
+				
+				if (daField == "QuestionText" || daField == "AnswerText")
+        			TheQuizModel.Nodes[dropOnObjectIdx][daField] = itemsArray[0].TextID;    
+        	}
+        	else
+        	if (itemsArray[0].hasOwnProperty("NodeID"))
+        	{
+        		dropOnObjectIdx = this.indicesToIndex(lastRollOver.rowIndex, lastRollOver.columnIndex);
+				daField = this.columns[lastRollOver.columnIndex].dataField;
+				
+				if (daField == "AnswersString")
+        			TheQuizModel.Nodes[dropOnObjectIdx].AddAnswer(itemsArray[0].NodeID);
+        		else
+        			TheQuizModel.MoveNodeToIdx(itemsArray[0].NodeID, dropOnObjectIdx);
+        	}
+        }
+                
+        protected override function CreateMenuItems() : void
+        {
+        	var cmi:ContextMenuItem = new ContextMenuItem("Crear nodo...", false, true, true);
+            mContextMenu.customItems.push(cmi);
+            
+            cmi.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, CrearSelected);
+            
+            cmi = new ContextMenuItem("Borrar nodo", false, true, true);
+            mContextMenu.customItems.push(cmi);
+            
+            cmi.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, BorrarSelected);
+        }
+        
+        protected override function ProcessDoubleClickOnEmptyRegion() : void
+        {
+        	CrearSelected(null);
+        }
+        
+        private function CrearSelected(event:ContextMenuEvent) : void
+        {
+        	TheQuizModel.AddNode();
+        }
+        
+        private function BorrarSelected(event:ContextMenuEvent) : void
+        {
+        	if (selectedItem != null)
+        	{
+        		TheQuizModel.RemoveNode(selectedItem as QuizNode);
+        		dispatchEvent(new Event("SelectedNodeChanged"));
+        	}
+        }
+        
+        private function OnSelectedChange(event:Event) : void
+        {
+        	if (!mSupressSelectionChange)
+        		dispatchEvent(new Event("SelectedNodeChanged"));
+        }
+        
+        protected override function RefreshSelection():void
+        {
+        	dispatchEvent(new Event("SelectedNodeChanged"));
+        }
+  	]]>
+  	
+  	</mx:Script>
+    
+</QuizEditor:CommonDataGrid>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+		 xmlns:flexlib="http://code.google.com/p/flexlib/"
+		 verticalGap="2" xmlns:Editor="Editor.*">
+	
+	 <mx:Style>	 
+		 .linkButtonWindowShade
+		 {
+	      	headerClass:ClassReference('mx.controls.LinkButton');
+	      	header-style-name:linkButtonStyle;     	     	
+	      	border-style:solid;      	
+	    	corner-radius:3;
+	    	background-color:#efefef;
+	    	background-alpha:.2;
+	    	padding-top:0;
+	    }
+	    
+	    .linkButtonStyle
+	    {
+	     	corner-radius:3;
+	    	fill-alphas:1,1;
+	    	padding-left:10;
+	    }
+	</mx:Style>
+	
+	<Editor:ObjectEditorBar id="myObjectEditorBar" />
+	
+	
+	<mx:Script>
+		<![CDATA[
+		import GameComponents.GameComponent;
+		
+		import Model.SceneObject;
+		import Model.AssetObject;
+		
+		import mx.binding.utils.ChangeWatcher;		
+		import mx.collections.ArrayCollection;
+		import mx.binding.utils.BindingUtils;
+		
+		import flexlib.containers.WindowShade;
+		
+		
+		public function Init(controller : EditorController):void
+		{
+			mController = controller;
+			myObjectEditorBar.Init(mController);
+			
+			BindingUtils.bindSetter(ChangeAssetObjectSelection, mController, "SelectedAnyAssetObject");
+		}
+				
+		private function ChangeAssetObjectSelection(newObj : AssetObject) : void
+		{
+			// Si hubiera subscripción a los componentes del seleccionado anterior, nos desuscribimos
+			if (mGameComponentsWatcher != null)
+				mGameComponentsWatcher.unwatch();
+			mGameComponentsWatcher = null;
+			
+			// Nos cargamos todos los WindowShades
+			for each(var windowShade : WindowShade in mWindowShades)
+				removeChild(windowShade);
+			mWindowShades = new ArrayCollection();
+		
+			if (newObj != null)
+			{				
+				// Nos bindeamos al cambio de componentes para el seleccionado actual
+				mGameComponentsWatcher = BindingUtils.bindSetter(OnGameComponentsChanged, newObj, "TheGameComponents");
+			}
+		}
+		
+		private function OnGameComponentsChanged(newGameComponents : ArrayCollection):void
+		{
+			// Borramos las antiguas WindowShades
+			for (var c : int = 0; c < mWindowShades.length; c++)
+			{
+				if (!IsShortNameInGameComponentsList(mWindowShades[c].label, newGameComponents))
+				{
+					removeChild(mWindowShades[c]);
+					mWindowShades.removeItemAt(c);
+					c--;
+				}	
+			}
+
+			for (c = 0; c < newGameComponents.length; c++)
+			{
+				if (IsLabelInWindowShades(newGameComponents[c].ShortName))
+					continue;
+					
+				var newShade : WindowShade = new WindowShade();
+				newShade.label = newGameComponents[c].ShortName;
+				newShade.styleName="linkButtonWindowShade";
+				newShade.percentWidth=100;
+				
+				var newInspector : GameComponentInspector = new GameComponentInspector;
+
+				newInspector.setStyle("borderSides", "top");
+				//newInspector.setStyle("borderStyle", "none");			
+				newShade.addChild(newInspector);
+				mWindowShades.addItem(newShade);
+				addChild(newShade);
+				
+				newInspector.Init(mController, newGameComponents[c]);
+				
+				if (newInspector.dataProvider.length == 0)
+					newShade.opened = false;
+			}
+			
+		}
+		
+		private function IsLabelInWindowShades(lab : String) : Boolean
+		{
+			var ret : Boolean = false;
+			for each(var winShade : WindowShade in mWindowShades)
+			{
+				if (winShade.label == lab)
+				{
+					ret = true;
+					break;
+				}
+			}
+			
+			return ret;
+		}
+		
+		private function IsShortNameInGameComponentsList(shortName : String, gameCompsList : ArrayCollection) : Boolean
+		{
+			var ret : Boolean = false;
+			
+			for each(var gameComp : GameComponent in gameCompsList)
+			{
+				if (gameComp.ShortName == shortName)
+				{
+					ret = true;
+					break;
+				}
+			}
+			
+			return ret;
+		}
+		
+		private var mGameComponentsWatcher : ChangeWatcher;
+		private var mWindowShades : ArrayCollection = new ArrayCollection;
+		private var mController : EditorController;
+		]]>
+	</mx:Script>
+</mx:VBox>

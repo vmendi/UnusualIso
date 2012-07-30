@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:QuizEditor="Editor.QuizEditor.*" width="100%" height="100%">
+	
+	<mx:Script>
+		<![CDATA[
+			import Quiz.QuizModel;
+			import Editor.IWindowHelper;
+			
+			public function Init(controller : QuizEditorController, windowHelper : IWindowHelper):void
+			{
+				mQuizEditorController = controller;
+			}
+			
+			[Bindable]
+			private var mQuizEditorController : QuizEditorController;
+			
+		]]>
+	</mx:Script>
+	
+	<QuizEditor:TextsDataGrid id="myTexts" width="100%" height="100%" TheQuizModel="{mQuizEditorController.TheQuizModel}" 
+							  dataProvider="{mQuizEditorController.TheQuizModel.Texts}"/>
+	
+</mx:Canvas>

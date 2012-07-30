@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:DataGrid xmlns:mx="http://www.adobe.com/2006/mxml"
+	editable="true"
+	itemEditBeginning="OnItemEditBeginning(event);"
+	itemEditBegin="OnItemEditBegin(event);"
+	itemEditEnd="OnItemEditEnd(event);"
+	width="100%">
+	<mx:columns>
+     	<mx:DataGridColumn headerText="Nombre" dataField="Key" width="100" editable="false"/>
+     	<mx:DataGridColumn headerText="Valor" dataField="Value" width="100" editable="true"/>
+     </mx:columns>
+
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.IFocusManagerComponent;
+		import mx.events.FlexEvent;
+		import mx.binding.utils.ChangeWatcher;
+		import mx.binding.utils.BindingUtils;
+		
+		import GameComponents.DefaultGameComponent;
+		import GameComponents.GameComponent;
+		
+		import Model.AssetObject;
+		import Model.SceneObject;
+		
+		import utils.Point3;
+		import utils.Delegate;
+		import utils.KeyValueWrapper;
+		
+		import mx.controls.TextInput;		
+		import mx.controls.NumericStepper;		
+		import mx.events.DataGridEventReason;
+		import mx.collections.ArrayCollection;
+		import mx.events.DataGridEvent;
+
+		
+		public function Init(controller : EditorController, gameComponent : GameComponent) : void
+		{
+			mController = controller;
+			mGameComponent = gameComponent;
+			
+			dataProvider = mGameComponent.ReflectGameComponent();
+			
+			this.showHeaders = false;
+			this.height = dataProvider.length*(this.rowHeight+2) + 1; // + this.headerHeight;
+			
+			for each(var wrap : KeyValueWrapper in dataProvider)
+			{
+				var varName:String = wrap.Key;
+				var newWatcher : ChangeWatcher = BindingUtils.bindSetter(Delegate.create(OnPropChanged, wrap), mGameComponent, varName);
+				mWatchers.push(newWatcher);
+			}
+			
+			// Hay q subscribirse al padre para que el sistema te lo mande
+			parent.addEventListener(Event.REMOVED, OnRemoved);
+		}
+		
+		
+		private function OnRemoved(event:Event):void
+		{
+			if (event.target != parent)
+				return;
+				
+			parent.removeEventListener(Event.REMOVED, OnRemoved);
+			
+			for each(var watcher : ChangeWatcher in mWatchers)
+			{
+				watcher.unwatch();
+			}
+			mWatchers = null;
+		}
+
+		
+		private function OnPropChanged(prop:Object, wrap:KeyValueWrapper):void
+		{
+			dataProvider.itemUpdated(wrap);
+		}
+		
+		
+		private function OnItemEditBeginning(event:DataGridEvent):void
+		{
+			// Prevención de edición. El nombre del movieclip asociado al DefaultGameComponent no se edita
+			// TODO: Estaría bien q esto fuera una propiedad de la variable. Si no es writable, no se devuelve en
+			// ReflectGameComponent, pero se debería devolver y decidir aquí (necesitaríamos un "visible" pero no "editable")
+			if ((mGameComponent is DefaultGameComponent) && dataProvider[event.rowIndex].Key == "MovieClipName")
+			{
+				event.preventDefault();
+			}
+		}
+		
+		private function OnItemEditBegin(event:DataGridEvent):void
+		{
+			var varName : String = dataProvider[event.rowIndex].Key;
+
+			if (mGameComponent[varName] is Boolean)
+			{
+				CreateBooleanEditor(varName, event);
+			}
+			else
+			if (mGameComponent[varName] is Number)
+			{
+				CreateNumberEditor(varName, event);
+			}
+			else
+			{
+				CreateStringEditor(varName, event);
+			}
+		}
+		
+		private function CreateNumberEditor(varName : String, event:DataGridEvent):void
+		{
+			event.preventDefault();
+
+			var theClassFactory : ClassFactory = new ClassFactory(TextInput);
+
+			/*
+			var stepSize : Number = 1;
+			var maximum : Number = 9999;
+			var minimum : Number = -9999;
+
+			if (mGameComponent.hasOwnProperty(varName+"StepSize"))
+				stepSize = mGameComponent[varName+"StepSize"]; 
+
+			if (mGameComponent.hasOwnProperty(varName+"Maximum"))
+				maximum = mGameComponent[varName+"Maximum"];
+				
+			if (mGameComponent.hasOwnProperty(varName+"Minimum"))
+				minimum = mGameComponent[varName+"Minimum"];
+			
+			theClassFactory.properties = { data:mGameComponent[varName], stepSize:stepSize, maximum:maximum, minimum:minimum};
+			*/
+			
+			theClassFactory.properties = { data:mGameComponent[varName] };
+			
+			columns[event.columnIndex].itemEditor = theClassFactory;
+			columns[event.columnIndex].editorDataField = "value";
+
+			createItemEditor(event.columnIndex, event.rowIndex);
+			
+			var theItemEditor : TextInput = itemEditorInstance as TextInput;
+			this.focusManager.setFocus(theItemEditor);
+			theItemEditor.selectionBeginIndex = 0;
+			theItemEditor.selectionEndIndex = theItemEditor.text.length;
+			
+			 // Otra forma de copiar el valor, cuando ya está creado el itemeditor
+			// itemEditorInstance.data = editedItemRenderer.data.Value;
+		}
+		
+		private function CreateBooleanEditor(varName : String, event:DataGridEvent):void
+		{
+			event.preventDefault();
+				
+			var theClassFactory : ClassFactory = new ClassFactory(BooleanItemEditor);
+			theClassFactory.properties = { data:mGameComponent[varName] };
+			
+			columns[event.columnIndex].itemEditor = theClassFactory;				 
+			createItemEditor(event.columnIndex, event.rowIndex);
+		}
+		
+		private function CreateStringEditor(varName : String, event:DataGridEvent):void
+		{
+			event.preventDefault();
+
+			var theClassFactory : ClassFactory = new ClassFactory(TextInput);
+			theClassFactory.properties = { data:mGameComponent[varName] };
+			
+			columns[event.columnIndex].itemEditor = theClassFactory;
+			
+			columns[event.columnIndex].editorDataField = "text";
+			createItemEditor(event.columnIndex, event.rowIndex);
+		}
+		
+		private function OnItemEditEnd(event:DataGridEvent):void
+		{
+			var varName : String = dataProvider[event.rowIndex].Key;
+						
+			if (event.reason == DataGridEventReason.CANCELLED)
+                return;
+
+			if (mGameComponent[varName] is Boolean)
+			{
+				event.preventDefault();
+				
+				var boolEditor : BooleanItemEditor = this.itemEditorInstance as BooleanItemEditor;
+				if (boolEditor.selectedItem == "true")
+					dataProvider[event.rowIndex].Value = true;
+				else
+					dataProvider[event.rowIndex].Value = false;
+				
+				dataProvider.itemUpdated(dataProvider[event.rowIndex]);
+				destroyItemEditor();
+			}
+			else
+			if (mGameComponent[varName] is Number)
+			{
+				event.preventDefault();
+				
+				var daText : String = (itemEditorInstance as TextInput).text;
+				var parsedFloat : Number = parseFloat(daText);
+				
+				if (!isNaN(parsedFloat))
+					dataProvider[event.rowIndex].Value = parsedFloat;
+
+				dataProvider.itemUpdated(dataProvider[event.rowIndex]);
+				destroyItemEditor();
+			}
+			else
+			if (mGameComponent[varName] is Point3)
+			{
+				event.preventDefault();
+				
+				// Parseamos el potencial Point3 que el usuario ha escrito y lo guardamos en el Value
+				var parsedPoint3 : Point3 = Point3.Point3FromString((itemEditorInstance as TextInput).text);
+				
+				if (parsedPoint3 != null)
+				{
+					dataProvider[event.rowIndex].Value = parsedPoint3;
+					dataProvider.itemUpdated(dataProvider[event.rowIndex]);
+				}
+				destroyItemEditor();
+			}
+			else
+			if (mGameComponent[varName] is Point)
+			{
+				event.preventDefault();
+				
+				// Parseamos el potencial Point que el usuario ha escrito y lo guardamos en el Value
+				var parsedPoint : Point = Point3.PointFromString((itemEditorInstance as TextInput).text);
+				
+				if (parsedPoint != null)
+				{
+					dataProvider[event.rowIndex].Value = parsedPoint;
+					dataProvider.itemUpdated(dataProvider[event.rowIndex]);
+				}
+				destroyItemEditor();
+			}
+		}
+		
+		private var mController : EditorController;
+		private var mGameComponent : GameComponent;
+		
+		private var mWatchers : Array = new Array();
+		]]>
+	</mx:Script>
+	
+	
+</mx:DataGrid>

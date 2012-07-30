@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:flexlib="http://code.google.com/p/flexlib/"
+	layout="absolute"
+	addedToStage="OnAddedToStage();"
+	backgroundImage="mx.skins.halo.ApplicationBackground"
+	backgroundColor="0xFFFFFF"
+	frameRate="30"
+	width="1200" height="900"
+	creationComplete="OnCreationComplete(event);"
+	closing="OnClosing();"
+	xmlns:QuizEditor="Editor.QuizEditor.*">
+
+	<mx:Script>
+		<![CDATA[
+		import mx.core.UIComponent;
+		import mx.core.FlexSprite;
+		import utils.UIComponentWrapper;
+		import utils.KeyboardHandler;
+		import utils.FPSCounter;
+
+		import mx.managers.SystemManager;
+		import mx.controls.SWFLoader;
+		import mx.collections.ArrayCollection;
+		import mx.events.FlexEvent;
+		import mx.controls.Alert;
+
+		import Model.GameModel;
+		import GameComponents.GameComponentEnumerator;
+
+		import Editor.EditorView;
+		import Editor.EditorController;
+		import Editor.EditorLoadSaveController;
+
+
+		private function OnCreationComplete(event: Event): void
+        {
+            nativeWindow.x = (Capabilities.screenResolutionX - nativeWindow.width) / 2;
+            nativeWindow.y = (Capabilities.screenResolutionY - nativeWindow.height) / 2;
+        }
+
+
+		protected function OnAddedToStage() : void
+		{
+			stage.quality = StageQuality.BEST;
+
+			KeyboardHandler.Init(stage);
+			FPSCounter.Init(stage, new Point(0, 21));
+
+			mLoadSaveController = new EditorLoadSaveController(new LoadSaveHelperAIR());
+
+			mLoadSaveController.addEventListener("GameModelNew", OnGameModelChanged);
+			mLoadSaveController.addEventListener("GameModelLoaded", OnGameModelChanged);
+			mLoadSaveController.addEventListener("LoadError", OnGameModelLoadError);
+
+			// Temp
+			//mLoadSaveController.LoadProjectUrl("Maps/MmoGirls/Apartment.xml");
+			//mLoadSaveController.LoadProjectUrl("Maps/Platforms/PlatformsTest.xml");
+			//mLoadSaveController.LoadProjectUrl("Maps/OpelInsignia/OIPruebas.xml");
+			//mLoadSaveController.LoadProjectUrl("Maps/OpelInsignia/QuizOI.xml");
+			
+			mLoadSaveController.LoadProjectUrl("Maps/Telerecicla/Amarillo.xml");
+			//mLoadSaveController.LoadProjectUrl("Maps/Telerecicla/Ecotrivial.xml");
+			//mLoadSaveController.LoadProjectUrl("Maps/Telerecicla/Hidden.xml");
+			//mLoadSaveController.LoadProjectUrl("Maps/Telerecicla/Caminos.xml");
+
+			/*
+			InitializeViewAndController();
+			*/
+		}
+
+		private function OnClosing() : void
+		{
+			// Si cierran la ventana principal, salimos de todas
+			NativeApplication.nativeApplication.exit();
+		}
+
+		private function InitializeViewAndController() : void
+		{
+			mEditorController = new EditorController(new GameComponentEnumerator, mLoadSaveController);
+			mEditorView = new EditorView();
+			addChild(mEditorView);
+
+			mEditorView.Init(mEditorController, new WindowHelperAIR());
+		}
+
+		protected function OnGameModelLoadError(event:ErrorEvent):void
+		{
+			Alert.show(event.text, "Error de carga...", Alert.OK);
+		}
+
+		protected function OnGameModelChanged(event:Event):void
+		{
+			if (mEditorView != null)
+				removeChild(mEditorView);
+
+			InitializeViewAndController();
+		}
+
+		private var mLoadSaveController : EditorLoadSaveController = null;
+		private var mEditorController : EditorController = null;
+		private var mEditorView : EditorView = null;
+		]]>
+	</mx:Script>
+
+</mx:WindowedApplication>
+
+
+<!--
+		/*
+		var urlRequest : URLRequest = new URLRequest("Borrame.swf");
+		addChild(mSWFLoader);
+		mSWFLoader.addEventListener("complete", prueba);
+		mSWFLoader.load("Borrame.swf");
+		*/
+
+		private var mSWFLoader : SWFLoader = new SWFLoader();
+
+		private function prueba2(event:Event) : void
+		{
+			var sys : SystemManager = event.target as SystemManager;
+			var li : LoaderInfo = sys.loaderInfo;
+
+			var p : DisplayObject = mSWFLoader.content as DisplayObject;
+			var pruebaClass : Class = mSWFLoader.loaderContext.applicationDomain.getDefinition("MiClase") as Class;
+			var test : Array = utils.getDefinitionNames(mSWFLoader.loaderInfo);
+			var adddveamos : Object = new pruebaClass();
+
+			var enumerator : IGameComponentEnumerator = sys.application["TheGameComponentEnumerator"] as IGameComponentEnumerator;
+			var classes : ArrayCollection = enumerator.GetComponentClasses();
+			var glio : GameComponent = new (classes[0] as Class);
+
+			pruebaClass  = li.applicationDomain.getDefinition("MiClase") as Class;
+
+			for each(var veamos : String in test)
+			{
+				if (veamos.indexOf("MiClase") != -1)
+					trace(veamos);
+			}
+
+	/*
+			for each(var veamos : String in test)
+			{
+				var gameCompStr : String = "GameComponents";
+				var idx : int = veamos.indexOf(gameCompStr);
+				trace(veamos);
+				if (idx != -1)
+				{
+					trace("FOUND");
+					var start : int = idx+gameCompStr.length+2;
+					var end : int = veamos.length;
+					var subStr : String = veamos.substr(idx+gameCompStr.length+2, end-start );
+					var loTiene : Boolean = li.applicationDomain.hasDefinition(veamos);
+					var daClass : Class = li.applicationDomain.getDefinition(veamos) as Class;
+					var casi : GameComponent = new daClass();
+
+					var classInfo:ClassInfo = new ClassInfo( daClass );
+					trace(classInfo.type);
+					for each (var prop : MethodInfo in classInfo.properties)
+					{
+						trace(prop);
+					}
+				}
+			}
+			*/
+
+			removeChild(mSWFLoader);
+		}
+
+		private var mSysMan : SystemManager = null;
+		private function prueba(event:Event):void
+		{
+			mSysMan = mSWFLoader.content as SystemManager;
+			mSysMan.addEventListener(FlexEvent.APPLICATION_COMPLETE, prueba2);
+		}
+-->

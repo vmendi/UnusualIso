@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:ComboBox xmlns:mx="http://www.adobe.com/2006/mxml" dataChange="OnDataChange(event);">
+	<mx:dataProvider>
+	    <mx:String>true</mx:String>
+	    <mx:String>false</mx:String>
+	</mx:dataProvider>            
+        
+	<mx:Script>
+	    <![CDATA[	       
+	    public function OnDataChange(event:Event):void
+	    {
+	    	// Convertimos del type que nos inyectan en el data, que tiene que ser booleano,
+	    	// a una de las cadenas aceptadas del dataProvider
+	    	selectedItem = (data as Boolean) ? "true" : "false";
+	    }  
+	    ]]>
+	</mx:Script>
+	
+</mx:ComboBox>

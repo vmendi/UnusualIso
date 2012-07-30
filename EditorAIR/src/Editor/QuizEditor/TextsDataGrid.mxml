@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuizEditor:CommonDataGrid xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:QuizEditor="Editor.QuizEditor.*"
+	dragEnabled="true"
+	dragMoveEnabled="false" 
+	draggableColumns="false" width="100%" height="100%">
+	
+	<QuizEditor:columns>
+		<mx:DataGridColumn headerText="ID" dataField="TextID" width="80"/>
+		<mx:DataGridColumn headerText="Texto" dataField="Text"/>
+	</QuizEditor:columns>
+		
+	<mx:Script>
+		<![CDATA[			
+			protected override function CreateMenuItems() : void
+	        {
+	        	var cmi:ContextMenuItem = new ContextMenuItem("Crear texto...", false, true, true);
+	            mContextMenu.customItems.push(cmi);
+	            
+	            cmi.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, CrearSelected);
+	            
+	            cmi = new ContextMenuItem("Borrar texto", false, true, true);
+	            mContextMenu.customItems.push(cmi);
+	            
+	            cmi.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, BorrarSelected);
+	        }
+	        
+	        private function CrearSelected(event:ContextMenuEvent) : void
+	        {
+	        	var newText : Object = TheQuizModel.AddText();
+	        	newText.Text = "Text" + TheQuizModel.Texts.length.toString();
+	        }
+	        
+	        protected override function ProcessDoubleClickOnEmptyRegion() : void
+        	{
+        		CrearSelected(null);
+        	}
+	        
+	        private function BorrarSelected(event:ContextMenuEvent) : void
+	        {
+	        	if (selectedItem != null)
+	        		TheQuizModel.RemoveText(selectedItem);
+	        }
+		]]>
+	</mx:Script>
+</QuizEditor:CommonDataGrid>

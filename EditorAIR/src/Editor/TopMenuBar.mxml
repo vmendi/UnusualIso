@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:MenuBar xmlns:mx="http://www.adobe.com/2006/mxml" dataProvider="{TopMenuBarData}" 
+	labelField="@label" showRoot="false" itemClick="OnItemClick(event);"  >
+
+<mx:XML id="TopMenuBarData" xmlns="">
+<menuitem label="Menu">
+	<menuitem label="Archivo">
+		<menuitem label="Nuevo" command="New"/>
+	    <menuitem label="Abrir nivel..." command="OpenProject"/>
+	    <menuitem label="Grabar nivel" command="SaveProject"/>
+	    <menuitem label="Grabar nivel como..." command="SaveAsProject"/>
+	    <menuitem type="separator"/>
+	    <menuitem label="Abrir Quiz Editor..." command="OpenQuizEditor"/>
+	    <menuitem type="separator"/>
+	</menuitem>
+	
+	<menuitem label="Librería">
+	    <menuitem label="Abrir librería..." command="OpenLibrary"/>
+	    <menuitem label="Grabar librería" command="SaveLibrary"/>
+	    <menuitem label="Grabar librería como..." command="SaveAsLibrary"/>
+	    <menuitem type="separator"/>
+	    <menuitem label="Añadir SWF..." command="AddSWFToLibrary"/>
+	</menuitem>
+	
+	<Background label="Background">
+		<ToggleEditBackground label="Editar Background..." command="EditBackground"/>
+		<menuitem type="separator"/>
+		<SelectBackgroundSWF label="Seleccionar SWF Fondo..." command="SelectBackgroundSWF"/>
+		<DeleteBackground label="Eliminar SWF Fondo" command="DeleteBackground"/>
+		<menuitem type="separator"/>
+		<ToggleGridRendering label="No Renderizar grid" command="ToggleGridRendering"/>
+		<ToggleWalkableRendering label="No Renderizar caminabilidad" command="ToggleWalkableRendering"/>
+	</Background>
+	
+	<Game label="Juego">
+	    <Ejecutar label="Ejecutar" command="PlayGame"/>
+	    <Pausar label="Pausar" command="PauseGame" enabled="false"/>
+	    <Parar label="Parar" command="StopGame" enabled="false"/>
+	</Game>
+</menuitem>
+</mx:XML>
+
+<mx:Script>
+	<![CDATA[
+	import Editor.QuizEditor.QuizEditor;
+	import mx.events.MenuEvent;
+	
+	public function Init(controller : EditorController, windowHelper:IWindowHelper) : void
+	{
+		mController = controller;
+		mWindowHelper = windowHelper;
+		
+		RefreshGridAndWalkable();
+	}
+	
+	private function RefreshGridAndWalkable() : void
+	{
+		RefreshGridRenderingEnabled(mController.TheGameModel.TheIsoCamera.TheIsoBackground.GridRenderingEnabled);
+		RefreshWalkableRenderingEnabled(mController.TheGameModel.TheIsoCamera.TheIsoBackground.WalkableRenderingEnabled);
+	}
+	
+	private function RefreshGridRenderingEnabled(enabled : Boolean):void
+	{
+		if (enabled)
+			TopMenuBarData.child("Background").child("ToggleGridRendering").@label = "No Renderizar grid";
+		else
+			TopMenuBarData.child("Background").child("ToggleGridRendering").@label = "Renderizar grid";
+	}
+	
+	private function RefreshWalkableRenderingEnabled(enabled : Boolean) : void
+	{
+		if (enabled)
+			TopMenuBarData.child("Background").child("ToggleWalkableRendering").@label = "No Renderizar caminabilidad";
+		else
+			TopMenuBarData.child("Background").child("ToggleWalkableRendering").@label = "Renderizar caminabilidad";
+	}
+	
+	protected function OnItemClick(event:MenuEvent) : void
+	{
+		if (event.item.@command == "EditBackground")
+		{
+			var isOn : Boolean = mController.ToggleEditBackground();
+			
+			if (isOn)
+			{
+				TopMenuBarData.child("Background").child("ToggleEditBackground").@label = "Salir edición background...";
+								
+				this.getMenuAt(0).enabled = false;
+				this.getMenuAt(1).enabled = false;
+				this.getMenuAt(3).enabled = false;
+			}
+			else
+			{
+				TopMenuBarData.child("Background").child("ToggleEditBackground").@label = "Editar Background...";
+				
+				this.getMenuAt(0).enabled = true;
+				this.getMenuAt(1).enabled = true;
+				this.getMenuAt(3).enabled = true;
+			}
+			
+			RefreshGridAndWalkable();
+		}
+		else
+		if (event.item.@command == "ToggleGridRendering")
+		{
+			RefreshGridRenderingEnabled(mController.ToggleGridRendering());
+		}
+		else
+		if(event.item.@command == "ToggleWalkableRendering")
+		{
+			RefreshWalkableRenderingEnabled(mController.ToggleWalkableRendering());
+		}
+		else
+		if (event.item.@command == "PlayGame")
+		{
+			mController.PlayGame();
+			
+			TopMenuBarData.child("Game").child("Ejecutar").@enabled = false;
+			TopMenuBarData.child("Game").child("Pausar").@enabled = true;
+			TopMenuBarData.child("Game").child("Parar").@enabled = true;		
+		}
+		else
+		if (event.item.@command == "StopGame")
+		{
+			mController.StopGame();
+			
+			TopMenuBarData.child("Game").child("Ejecutar").@enabled = true;
+			TopMenuBarData.child("Game").child("Pausar").@enabled = false;
+			TopMenuBarData.child("Game").child("Parar").@enabled = false;
+		}
+		else
+		if (event.item.@command == "PauseGame")
+		{
+			var isPaused : Boolean = mController.TheGameModel.TogglePause();
+			if (isPaused)
+				TopMenuBarData.child("Game").child("Pausar").@label = "Reanudar";
+			else
+				TopMenuBarData.child("Game").child("Pausar").@label = "Pausar";
+		}
+		else
+		if (event.item.@command == "DeleteBackground")
+		{
+			mController.DeleteBackground();
+		}
+		else
+		if (event.item.@command == "OpenQuizEditor")
+		{
+			// Como es "Otra vista" no tenemos que pasarlo por el controlador, la vista está autorizada
+			// a abrir otras vistas o a modificarse a sí misma sin informar al controlador/modelo
+			var quizEditor : QuizEditor = new QuizEditor();
+			quizEditor.Init(mController.TheEditorLoadSaveController.TheLoadSaveHelper, mWindowHelper);
+			mWindowHelper.OpenWindow("Quiz Editor", 1024, 768, quizEditor);
+		}
+		else	
+			// Rerutamos al LoadSave!
+			mController.TheEditorLoadSaveController[event.item.@command]();
+	}
+
+	
+	private var mController : EditorController;
+	private var mWindowHelper : IWindowHelper;
+	
+	]]>
+</mx:Script>
+
+</mx:MenuBar>

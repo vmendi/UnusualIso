@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flexlib:SuperTabNavigator xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:flexlib="http://code.google.com/p/flexlib/" width="400" height="300">
+	
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.FocusManager;
+			import mx.effects.Resize;
+			import utils.GenericEvent;
+			import flexlib.events.SuperTabEvent;
+			import flexlib.controls.tabBarClasses.SuperTab;
+			import mx.collections.ArrayCollection;
+			import Model.AssetLibrary;
+			import mx.binding.utils.BindingUtils;
+			
+			public function Init(controller : EditorController) : void
+			{
+				mController = controller;
+				
+				mController.TheGameModel.TheAssetLibrary.addEventListener("SWFLibraryAdded", OnLibrarySWFAdded);
+				mController.TheGameModel.TheAssetLibrary.addEventListener("LibraryLoaded", OnLibraryLoaded);
+								
+				closePolicy=SuperTab.CLOSE_SELECTED;
+				addEventListener(SuperTabEvent.TAB_CLOSE, OnSuperTabClosed, false, 0, true);
+				
+				// El modelo puede contener librerías cuando nos inicializan, nos actualizamos
+				OnLibraryLoaded(null);
+			}
+			
+			private function OnLibraryLoaded(e:Event) : void
+			{
+				this.removeAllChildren();
+				
+				for each(var swfLibrary : Object in mController.TheGameModel.TheAssetLibrary.SWFLibraries)
+				{
+					CreateHList(swfLibrary);
+				}
+				
+				// Forzamos el repintado, a veces no pinta bien el último tab
+				this.validateNow();
+			}
+			
+			private function OnLibrarySWFAdded(event:GenericEvent):void
+			{
+				CreateHList(event.Data);
+			}
+			
+			private function CreateHList(swfLibrary : Object):void
+			{
+				var hList : AssetObjectsHList = new AssetObjectsHList();
+				hList.percentWidth = 100;
+				hList.percentHeight = 100;
+				addChild(hList);
+				hList.Init(mController, swfLibrary);
+			}
+			
+			private function OnSuperTabClosed(e : SuperTabEvent) : void
+			{
+				var closedHList : AssetObjectsHList = getChildAt(e.tabIndex) as AssetObjectsHList;
+				
+				mController.RemoveSWFLibrary(closedHList.SWFLibrary);
+			}
+			
+			
+			private var mController : EditorController;
+		]]>
+	</mx:Script>
+	
+</flexlib:SuperTabNavigator>

@@ -1,0 +1,2380 @@
+<QuizModel>
+  <Node>
+    <NodeID>Node00</NodeID>
+    <AnswerText/>
+    <QuestionText>En mis acampadas llevo una linterna que funciona con pilas, ¿Qué hago con ellas cuando se me gasten?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node04");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node01</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node02</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node03</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node04</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node01</NodeID>
+    <AnswerText>La deposito en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node02</NodeID>
+    <AnswerText>La deposito en el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node03</NodeID>
+    <AnswerText>La deposito en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node04</NodeID>
+    <AnswerText>La deposito en uno de los contenedores especiales para pilas distribuidos en mi ciudad.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node05</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Dónde deposito la botella de vidrio de mi vino preferido?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node08");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node06</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node07</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node08</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node09</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node06</NodeID>
+    <AnswerText>Yo no bebo nada embotellado.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node07</NodeID>
+    <AnswerText>En el contenedor amarillo de envases ligeros.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node08</NodeID>
+    <AnswerText>En el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node09</NodeID>
+    <AnswerText>Amontonaría varias y llamaría al ayuntamiento para que lo recogieran.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node10</NodeID>
+    <AnswerText/>
+    <QuestionText>He acabado con una bolsa entera de bollería. Si consigo levantarme de la silla ¿dónde deposito la bolsa para su reciclaje?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node12");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node11</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node12</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node13</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node14</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node11</NodeID>
+    <AnswerText>En el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node12</NodeID>
+    <AnswerText>En el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node13</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node14</NodeID>
+    <AnswerText>En el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node15</NodeID>
+    <AnswerText/>
+    <QuestionText>Esta noche voy a cenar filetes a la plancha que compré en el súper. ¿Dónde dejo la bandeja de corcho en la que viene la carne?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node17");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node16</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node17</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node18</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node19</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node16</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node17</NodeID>
+    <AnswerText>En el contenedor amarillo, porque es un envase de plástico.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node18</NodeID>
+    <AnswerText>Este producto no se recicla.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node19</NodeID>
+    <AnswerText>En el contenedor gris oscuro y rojo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node20</NodeID>
+    <AnswerText/>
+    <QuestionText>Es mi cumpleaños y me traen un regalo en una bolsa de papel ¿dónde la deposito para su reciclaje?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node21");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node21</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node22</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node23</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node24</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node21</NodeID>
+    <AnswerText>En el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node22</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node23</NodeID>
+    <AnswerText>En el iglú verde de vidrio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node24</NodeID>
+    <AnswerText>La emoción me impide ver los contenedores.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node25</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Dónde deposito para su reciclado todos los medicamentos caducados de mi abuelito?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node27");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node26</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node27</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node28</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node29</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node26</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node27</NodeID>
+    <AnswerText>En el contenedor de las farmacias o en un punto limpio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node28</NodeID>
+    <AnswerText>Los deposito en el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node29</NodeID>
+    <AnswerText>En el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node30</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cómo puedo reutilizar las bolsas de plástico que me ofrecen en el supermercado?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node31");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node31</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node32</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node33</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node34</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node31</NodeID>
+    <AnswerText>Reutilizarlas  para otras compras  o para separar los envases de plástico, latas y briks y depositarla luego en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node32</NodeID>
+    <AnswerText>Las tiraría al jardín.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node33</NodeID>
+    <AnswerText>Las devolvería al supermercado para que se encargaran ellos.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node34</NodeID>
+    <AnswerText>En los supermercados no dan bolsas que puedan ser recicladas.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node35</NodeID>
+    <AnswerText/>
+    <QuestionText>Una plaga de insectos me obligó a usar y acabar con el insecticida, ¿dónde deposito el envase?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node37");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node36</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node37</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node38</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node39</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node36</NodeID>
+    <AnswerText>En el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node37</NodeID>
+    <AnswerText>En el contenedor amarillo, porque es un envase metálico.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node38</NodeID>
+    <AnswerText>Este tipo de envase debería depositarlo  en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node39</NodeID>
+    <AnswerText>Tengo que llevarlo a la tienda donde lo adquirí para que ellos se encarguen de reciclarlo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node40</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Cuántas veces a la semana tengo que llevar los envases a los contenedores correspondientes?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node41");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node41</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node42</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node43</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node44</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node41</NodeID>
+    <AnswerText>Siempre que la bolsa esté llena.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node42</NodeID>
+    <AnswerText>Al menos una vez al día.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node43</NodeID>
+    <AnswerText>Tres veces a la semana.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node44</NodeID>
+    <AnswerText>Cada vez que me acuerde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node45</NodeID>
+    <AnswerText/>
+    <QuestionText>En mi armario hay varias camisas que ya no me pongo, ¿qué puedo hacer con ellas?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node48");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node46</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node47</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node48</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node49</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node46</NodeID>
+    <AnswerText>Depositarla en el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node47</NodeID>
+    <AnswerText>Depositarla en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node48</NodeID>
+    <AnswerText>Si está en buen estado, llevarla a un contenedor de ropa usada, y si no, depositarla en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node49</NodeID>
+    <AnswerText>Depositarla en el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node50</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué debo hacer con una vieja radio de la que me quiero deshacer?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node52");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node51</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node52</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node53</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node54</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node51</NodeID>
+    <AnswerText>Depositarla en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node52</NodeID>
+    <AnswerText>Dejarla en la tienda donde voy a comprar la nueva o llevarla a un punto limpio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node53</NodeID>
+    <AnswerText>Yo no me deshago de nada. NUNCA.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node54</NodeID>
+    <AnswerText>Llamar al ayuntamiento de mi localidad para que la recojan.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node55</NodeID>
+    <AnswerText/>
+    <QuestionText>Estoy en la oficina y mi bolígrafo se ha quedado sin tinta, ¿Qué hago con él?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node56");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node56</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node57</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node58</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node59</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node56</NodeID>
+    <AnswerText>Lo deposito en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node57</NodeID>
+    <AnswerText>Lo lanzo enfadado/a contra la mesa.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node58</NodeID>
+    <AnswerText>Lo deposito en  el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node59</NodeID>
+    <AnswerText>Lo deposito en el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node60</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué debo hacer con un viejo ordenador que ya no voy a utilizar?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node63");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node61</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node62</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node63</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node64</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node61</NodeID>
+    <AnswerText>Llevarlo a un contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node62</NodeID>
+    <AnswerText>Llamar al ayuntamiento de mi localidad para que se encarguen de él.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node63</NodeID>
+    <AnswerText>Llevarlo a la tienda de informática donde voy a comprar el nuevo o a un punto limpio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node64</NodeID>
+    <AnswerText>Enterrarlo en el jardín para que alguien lo encuentre en el futuro.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node65</NodeID>
+    <AnswerText/>
+    <QuestionText>Mi hijo tiene un juguete de plástico que ya está roto, ¿dónde lo deposito? ( sin que él se entere, claro)</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node69");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node66</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node67</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node68</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node69</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node66</NodeID>
+    <AnswerText>En un punto limpio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node67</NodeID>
+    <AnswerText>En un contenedor de “juguetes usados”.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node68</NodeID>
+    <AnswerText>En el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node69</NodeID>
+    <AnswerText>Los juguetes rotos se tiran al contenedor de resto y no se reciclan</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node70</NodeID>
+    <AnswerText/>
+    <QuestionText>Compré unas uvas y otras frutas que venían en una caja de madera, ¿qué hago con la caja cuando esté vacía?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node71");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node71</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node72</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node73</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node74</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node71</NodeID>
+    <AnswerText>La deposito en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node72</NodeID>
+    <AnswerText>La deposito en el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node73</NodeID>
+    <AnswerText>La deposito en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node74</NodeID>
+    <AnswerText>La deposito en un contenedor especial.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node75</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Por qué los CD,s y DVD,s aun siendo de plástico no van al contenedor amarillo?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node76");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node76</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node77</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node78</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node79</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node76</NodeID>
+    <AnswerText>Porque no son envases, así que van al contenedor gris.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node77</NodeID>
+    <AnswerText>Porque sí.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node78</NodeID>
+    <AnswerText>Porque van al contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node79</NodeID>
+    <AnswerText>La música no hay que tirarla.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node80</NodeID>
+    <AnswerText/>
+    <QuestionText>He pintado un cuadro para un pequeño rincón de mi casa ¿dónde deposito el bote pequeño de plástico con pintura al agua que está vacío del todo?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node84");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node81</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node82</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node83</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node84</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node81</NodeID>
+    <AnswerText>Lo deposito en el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node82</NodeID>
+    <AnswerText>Lo deposito en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node83</NodeID>
+    <AnswerText>Lo deposito en el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node84</NodeID>
+    <AnswerText>Lo deposito en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node85</NodeID>
+    <AnswerText/>
+    <QuestionText>Hemos tomado un aperitivo a base de anchoas, berberechos y mejillones, ¿dónde deposito las latas para su correcto reciclaje?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node88");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node86</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node87</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node88</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node89</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node86</NodeID>
+    <AnswerText>En el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node87</NodeID>
+    <AnswerText>En el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node88</NodeID>
+    <AnswerText>En el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node89</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node90</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Dónde deposito una goma elástica para recogerme el pelo, que ya no utilizo?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node93");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node91</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node92</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node93</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node94</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node91</NodeID>
+    <AnswerText>Prefiero el pelo suelto. Pero la tiraría por el fregadero o el WC.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node92</NodeID>
+    <AnswerText>Contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node93</NodeID>
+    <AnswerText>Contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node94</NodeID>
+    <AnswerText>Contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node95</NodeID>
+    <AnswerText/>
+    <QuestionText>Ya no utilizo la batería de un antiguo móvil, ¿qué puedo hacer con ella?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node97");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node96</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node97</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node98</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node99</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node96</NodeID>
+    <AnswerText>Depositarla en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node97</NodeID>
+    <AnswerText>Dejarla en puntos específicos de recogida en las tiendas de móviles o llevarla a un punto limpio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node98</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node99</NodeID>
+    <AnswerText>En el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node100</NodeID>
+    <AnswerText/>
+    <QuestionText>Tengo una vieja plancha que ya no funciona ¿dónde puedo depositarla?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node101");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node101</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node102</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node103</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node104</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node101</NodeID>
+    <AnswerText>Lo mejor es depositarla en un punto limpio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node102</NodeID>
+    <AnswerText>Depositarlo en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node103</NodeID>
+    <AnswerText>Depositarlo en el cubo de la basura.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node104</NodeID>
+    <AnswerText>Depositarlo en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node105</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Dónde deposito un frasco de colonia vacío?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node108");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node106</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node107</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node108</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node109</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node106</NodeID>
+    <AnswerText>En el contenedor amarillo, por supuesto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node107</NodeID>
+    <AnswerText>En el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node108</NodeID>
+    <AnswerText>En el iglú verde de vidrio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node109</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node110</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué hago con el envase del yogur una vez que lo he terminado?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node112");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node111</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node112</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node113</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node114</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node111</NodeID>
+    <AnswerText>Lamer la tapa y después depositarlo en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node112</NodeID>
+    <AnswerText>Es de plástico, y por tanto, depositarlo en la bolsa que tengo para los envases que van al contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node113</NodeID>
+    <AnswerText>Lo separo del resto de residuos porque es altamente contaminante.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node114</NodeID>
+    <AnswerText>Da igual, se recicla de todas formas.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node115</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué hago con la bandeja de aluminio de los canelones de ayer?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node117");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node116</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node117</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node118</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node119</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node116</NodeID>
+    <AnswerText>Depositarla en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node117</NodeID>
+    <AnswerText>El contenedor amarillo es la opción correcta.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node118</NodeID>
+    <AnswerText>Depositarla en el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node119</NodeID>
+    <AnswerText>Es papel, ¿no? Pues al contenedor azul</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node120</NodeID>
+    <AnswerText/>
+    <QuestionText>Tengo unas carpetas de cartón en las que guardaba facturas (¡qué horror!) y ya no las voy a utilizar ¿dónde las deposito?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node121");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node121</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node122</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node123</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node124</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node121</NodeID>
+    <AnswerText>En el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node122</NodeID>
+    <AnswerText>En el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node123</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node124</NodeID>
+    <AnswerText>En el iglú verde de vidrio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node125</NodeID>
+    <AnswerText/>
+    <QuestionText>Ya no utilizo un viejo cuaderno con anillas que está siempre perdido por los cajones, ¿dónde lo deposito?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node129");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node126</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node127</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node128</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node129</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node126</NodeID>
+    <AnswerText>En el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node127</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node128</NodeID>
+    <AnswerText>En el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node129</NodeID>
+    <AnswerText>Quito las tapas si son de plástico y la deposito en el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node130</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué debería hacer con un ratón de ordenador estropeado?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node131");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node131</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node132</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node133</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node134</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node131</NodeID>
+    <AnswerText>Llevarlo a la tienda de informática donde voy a comprarme otro o depositarlo en un punto limpio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node132</NodeID>
+    <AnswerText>Depositarlo en el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node133</NodeID>
+    <AnswerText>Depositarlo en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node134</NodeID>
+    <AnswerText>Depositarlo en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node135</NodeID>
+    <AnswerText/>
+    <QuestionText>Se me ha acabado la mermelada de frambuesa (ohhh)… ¿Dónde deposito el envase?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node139");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node136</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node137</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node138</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node139</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node136</NodeID>
+    <AnswerText>Todo al contenedor verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node137</NodeID>
+    <AnswerText>Todo al contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node138</NodeID>
+    <AnswerText>Todo al contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node139</NodeID>
+    <AnswerText>El tarro de vidrio al contenedor verde y la tapadera de metal al amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node140</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué ocurre si tu bolsa para el contenedor amarillo pesa demasiado?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node143");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node141</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node142</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node143</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node144</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node141</NodeID>
+    <AnswerText>Se ha colado el gato dentro.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node142</NodeID>
+    <AnswerText>Los envases de leche pesan como vacas.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node143</NodeID>
+    <AnswerText>No he reciclado bien porque los envases que van al contenedor amarillo son muy ligeros.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node144</NodeID>
+    <AnswerText>Yo deposito todo en el contenedor amarillo, por eso pesa tanto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node145</NodeID>
+    <AnswerText/>
+    <QuestionText>No te gusta mucho la mesita de madera que te regaló tu suegra. ¿Dónde la depositas?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node147");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node146</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node147</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node148</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node149</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node146</NodeID>
+    <AnswerText>Lo tengo que depositar en el contenedor amarillo que es donde puedo dejar también los muebles y la ropa.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node147</NodeID>
+    <AnswerText>Tengo que llamar al ayuntamiento para que recojan el mueble o llevarlo a un punto limpio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node148</NodeID>
+    <AnswerText>Lo tengo que depositar en el contenedor azul que es donde puedo dejar también los muebles y la ropa.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node149</NodeID>
+    <AnswerText>Lo tengo que depositar en el contenedor de resto. Y a escondidas.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node150</NodeID>
+    <AnswerText/>
+    <QuestionText>Me encanta el yogur tipo casero ¿Dónde debería depositar el tarro de cerámica en el que venía?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node154");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node151</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node152</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node153</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node154</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node151</NodeID>
+    <AnswerText>En el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node152</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node153</NodeID>
+    <AnswerText>En el iglú verde de vidrio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node154</NodeID>
+    <AnswerText>En el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node155</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Dónde debería depositar mis briks de zumo  vacíos?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node159");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node156</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node157</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node158</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node159</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node156</NodeID>
+    <AnswerText>En el iglú verde de vidrio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node157</NodeID>
+    <AnswerText>En el contenedor azul, porque es de cartón.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node158</NodeID>
+    <AnswerText>En el contenedor rojo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node159</NodeID>
+    <AnswerText>En el contendor amarillo, porque aunque parezca cartón también tiene aluminio y plástico en su interior.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node160</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Dónde debería depositar un carrete de hilo de coser?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node162");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node161</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node162</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node163</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node164</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node161</NodeID>
+    <AnswerText>Debería devolverlo al establecimiento donde lo compré.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node162</NodeID>
+    <AnswerText>En el contenedor amarillo, porque es un elemento de envase de plástico.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node163</NodeID>
+    <AnswerText>No sé coser. Y lo pongo en el azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node164</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node165</NodeID>
+    <AnswerText/>
+    <QuestionText>Me he lesionado el pie al confundir una piedra con una pelota y me han hecho radiografías ¿Dónde las deposito?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node166");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node166</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node167</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node168</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node169</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node166</NodeID>
+    <AnswerText>En un punto limpio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node167</NodeID>
+    <AnswerText>En el contenedor amarillo porque es de plástico.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node168</NodeID>
+    <AnswerText>En el iglú verde de vidrio.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node169</NodeID>
+    <AnswerText>En el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node170</NodeID>
+    <AnswerText/>
+    <QuestionText>Tengo una camiseta que está rota y ya no me la puedo poner más, ¿qué hago con ella?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node171");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node171</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node172</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node173</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node174</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node171</NodeID>
+    <AnswerText>Depositarla en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node172</NodeID>
+    <AnswerText>La deposito en un contenedor de ropa usada .</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node173</NodeID>
+    <AnswerText>¡Mi camiseta favorita! Lloro y luego la deposito en cualquier contenedor.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node174</NodeID>
+    <AnswerText>La deposito en el contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node175</NodeID>
+    <AnswerText/>
+    <QuestionText>Una vez abierta, ¿qué hago con la bolsa de plástico que envuelve las bolsas de basura?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node178");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node176</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node177</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node178</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node179</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node176</NodeID>
+    <AnswerText>Aunque suene paradójico, depositarla en la primera bolsa de basura que utilice.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node177</NodeID>
+    <AnswerText>Con los restos de comida.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node178</NodeID>
+    <AnswerText>Separarla y depositarla en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node179</NodeID>
+    <AnswerText>No importa dónde la deposite porque se recicla de igual forma.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node180</NodeID>
+    <AnswerText/>
+    <QuestionText>Para  una fiesta en casa he comprado bastantes botellas de refrescos de 2 litros. Una vez vacías ¿dónde las tengo que depositar?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node181");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node181</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node182</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node183</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node184</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node181</NodeID>
+    <AnswerText>Las tengo que depositar en el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node182</NodeID>
+    <AnswerText>Las puedo depositar en cualquier contenedor, porque no son reciclables.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node183</NodeID>
+    <AnswerText>Las tengo que depositar en el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node184</NodeID>
+    <AnswerText>Las escondo. A mis vecinos no les gustan las fiestas.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node185</NodeID>
+    <AnswerText/>
+    <QuestionText>Revisando el coche de cara al invierno, tengo que llenar el depósito del anticongelante, ¿qué hago con el envase de plástico vacío?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node187");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node186</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node187</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node188</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node189</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node186</NodeID>
+    <AnswerText>Llamar a la grúa para que venga a recogerlo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node187</NodeID>
+    <AnswerText>Lo deposito en el contenedor amarillo, bien vacío.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node188</NodeID>
+    <AnswerText>Llevarlo a una estación de servicio donde los reciclen.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node189</NodeID>
+    <AnswerText>Cuando encuentre un contenedor cualquiera, lo deposito en él.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node190</NodeID>
+    <AnswerText/>
+    <QuestionText>El embalaje del sofá que he comprado estaba compuesto de cartón y un plástico acolchado (de burbujas). Para su correcto reciclaje, ¿dónde lo deposito?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node192");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node191</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node192</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node193</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node194</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node191</NodeID>
+    <AnswerText>Puedo depositar el conjunto del embalaje en un contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node192</NodeID>
+    <AnswerText>Debería separar el cartón del embalaje de plástico, y depositar el primero en el contenedor azul, y este último en el amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node193</NodeID>
+    <AnswerText>Puedo depositarlo en el contenedor de residuos habitual.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node194</NodeID>
+    <AnswerText>En el iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node195</NodeID>
+    <AnswerText/>
+    <QuestionText>He limpiado a fondo toda la casa y los guantes de goma que usé ya no sirven ¿Qué hago con ellos?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node196");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node196</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node197</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node198</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node199</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node196</NodeID>
+    <AnswerText>Los deposito en el contenedor de resto.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node197</NodeID>
+    <AnswerText>En el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node198</NodeID>
+    <AnswerText>En el contenedor azul porque ha perdido sus cualidades de limpieza.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node199</NodeID>
+    <AnswerText>Estos artículos tienen una “vida” indefinida.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node200</NodeID>
+    <AnswerText/>
+    <QuestionText>¿Qué hago con el espejo que se me ha roto, lo deposito en el contenedor verde?</QuestionText>
+    <EnterCode>SetCorrectAnswer("Node203");</EnterCode>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers>
+      <Answer>
+        <NodeID>Node201</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node202</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node203</NodeID>
+      </Answer>
+      <Answer>
+        <NodeID>Node204</NodeID>
+      </Answer>
+    </Answers>
+  </Node>
+  <Node>
+    <NodeID>Node201</NodeID>
+    <AnswerText>Lo deposito en la bolsa de envases para el contenedor amarillo.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node202</NodeID>
+    <AnswerText>Lo deposito junto al papel y cartón que llevaré al contenedor azul.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node203</NodeID>
+    <AnswerText>No. Hay que depositarlo en un punto limpio</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+  <Node>
+    <NodeID>Node204</NodeID>
+    <AnswerText>Lo junto con los envases de vidrio para llevar al  iglú verde.</AnswerText>
+    <QuestionText/>
+    <EnterCode/>
+    <ConditionCode>return true;</ConditionCode>
+    <ExitCode/>
+    <Answers/>
+  </Node>
+</QuizModel>

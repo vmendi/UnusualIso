@@ -1,0 +1,276 @@
+<Map>
+  <LibraryUrl>Maps/MmoGirls/MmoGirlsLibrary.xml</LibraryUrl>
+  <SceneObjs>
+    <SceneObj>
+      <AssetObject>
+        <GameComponent>
+          <ClassName>GameComponents::DefaultGameComponent</ClassName>
+          <Attrib>
+            <Name>MovieClipName</Name>
+            <Value>AvatarChica</Value>
+          </Attrib>
+          <Attrib>
+            <Name>Name</Name>
+            <Value/>
+          </Attrib>
+        </GameComponent>
+        <GameComponent>
+          <ClassName>GameComponents::Character</ClassName>
+          <Attrib>
+            <Name>StartOrientation</Name>
+            <Value>SE</Value>
+          </Attrib>
+          <Attrib>
+            <Name>WalkSpeed</Name>
+            <Value>3</Value>
+          </Attrib>
+          <Attrib>
+            <Name>CamFollow</Name>
+            <Value>true</Value>
+          </Attrib>
+        </GameComponent>
+        <GameComponent>
+          <ClassName>GameComponents::IsoComponent</ClassName>
+          <Attrib>
+            <Name>WorldPos</Name>
+            <Value>(x=0.1414213562373095, y=0, z=-2.3585786437626903)</Value>
+          </Attrib>
+          <Attrib>
+            <Name>HeightInCells</Name>
+            <Value>0</Value>
+          </Attrib>
+          <Attrib>
+            <Name>Orientation</Name>
+            <Value>0</Value>
+          </Attrib>
+          <Attrib>
+            <Name>WidthInCells</Name>
+            <Value>0</Value>
+          </Attrib>
+          <Attrib>
+            <Name>Transparent</Name>
+            <Value>true</Value>
+          </Attrib>
+          <Attrib>
+            <Name>Walkable</Name>
+            <Value>false</Value>
+          </Attrib>
+        </GameComponent>
+        <GameComponent>
+          <ClassName>GameComponents::DisableInteraction</ClassName>
+        </GameComponent>
+      </AssetObject>
+    </SceneObj>
+  </SceneObjs>
+  <IsoBackground>
+    <SWFName>Assets/MmoGirls/BgBolera.swf</SWFName>
+    <WalkableRendering>true</WalkableRendering>
+    <GridRenderingEnabled>true</GridRenderingEnabled>
+    <Cell x="-9.5" y="1.5"/>
+    <Cell x="-10" y="1"/>
+    <Cell x="-10.5" y="0.5"/>
+    <Cell x="-11" y="0"/>
+    <Cell x="-11.5" y="-0.5"/>
+    <Cell x="-12" y="-1"/>
+    <Cell x="-12.5" y="-1.5"/>
+    <Cell x="-12.5" y="-2"/>
+    <Cell x="-12" y="-2.5"/>
+    <Cell x="-11.5" y="-3"/>
+    <Cell x="-11" y="-3.5"/>
+    <Cell x="-11" y="-3"/>
+    <Cell x="-12" y="-2"/>
+    <Cell x="-10.5" y="-3.5"/>
+    <Cell x="-10.5" y="-4"/>
+    <Cell x="-10" y="-4"/>
+    <Cell x="-10" y="-4.5"/>
+    <Cell x="-9.5" y="-4.5"/>
+    <Cell x="-9.5" y="-5"/>
+    <Cell x="-9" y="-5"/>
+    <Cell x="-9" y="-5.5"/>
+    <Cell x="-8.5" y="-5.5"/>
+    <Cell x="-8.5" y="-6"/>
+    <Cell x="-8" y="-6"/>
+    <Cell x="-8" y="-6.5"/>
+    <Cell x="-7.5" y="-6.5"/>
+    <Cell x="-7.5" y="-7"/>
+    <Cell x="-7" y="-7"/>
+    <Cell x="-7" y="-7.5"/>
+    <Cell x="-6.5" y="-7.5"/>
+    <Cell x="-6.5" y="-8"/>
+    <Cell x="-6" y="-8"/>
+    <Cell x="-6" y="-8.5"/>
+    <Cell x="-5.5" y="-8.5"/>
+    <Cell x="-5.5" y="-9"/>
+    <Cell x="-5" y="-9"/>
+    <Cell x="-5" y="-9.5"/>
+    <Cell x="-4.5" y="-9.5"/>
+    <Cell x="-4.5" y="-10"/>
+    <Cell x="-4" y="-10"/>
+    <Cell x="-4" y="-10.5"/>
+    <Cell x="-3.5" y="-10.5"/>
+    <Cell x="-3.5" y="-11"/>
+    <Cell x="-3" y="-11"/>
+    <Cell x="-3" y="-11.5"/>
+    <Cell x="-2.5" y="-11.5"/>
+    <Cell x="-2.5" y="-12"/>
+    <Cell x="-2" y="-12"/>
+    <Cell x="-2" y="-12.5"/>
+    <Cell x="-1.5" y="-12.5"/>
+    <Cell x="-1" y="-12"/>
+    <Cell x="-1" y="-11.5"/>
+    <Cell x="-0.5" y="-11.5"/>
+    <Cell x="-0.5" y="-11"/>
+    <Cell x="0" y="-11"/>
+    <Cell x="0" y="-10.5"/>
+    <Cell x="0.5" y="-10.5"/>
+    <Cell x="0.5" y="-10"/>
+    <Cell x="1" y="-10"/>
+    <Cell x="1" y="-9.5"/>
+    <Cell x="1.5" y="-9"/>
+    <Cell x="2" y="-8.5"/>
+    <Cell x="2.5" y="-8.5"/>
+    <Cell x="2" y="-9"/>
+    <Cell x="1.5" y="-9.5"/>
+    <Cell x="2.5" y="-8"/>
+    <Cell x="3" y="-8"/>
+    <Cell x="3" y="-7.5"/>
+    <Cell x="3.5" y="-7.5"/>
+    <Cell x="3.5" y="-7"/>
+    <Cell x="4" y="-7"/>
+    <Cell x="4.5" y="-6.5"/>
+    <Cell x="4" y="-6.5"/>
+    <Cell x="5" y="-6"/>
+    <Cell x="4.5" y="-6"/>
+    <Cell x="5.5" y="-5.5"/>
+    <Cell x="5" y="-5.5"/>
+    <Cell x="6" y="-5"/>
+    <Cell x="5.5" y="-5"/>
+    <Cell x="6.5" y="-4.5"/>
+    <Cell x="6" y="-4.5"/>
+    <Cell x="6.5" y="-4"/>
+    <Cell x="-11.5" y="-2.5"/>
+    <Cell x="-12" y="-1.5"/>
+    <Cell x="-11.5" y="-1"/>
+    <Cell x="-11" y="-0.5"/>
+    <Cell x="-10.5" y="0"/>
+    <Cell x="-10" y="0.5"/>
+    <Cell x="-9.5" y="1"/>
+    <Cell x="-9" y="1.5"/>
+    <Cell x="1.5" y="15"/>
+    <Cell x="-9" y="1"/>
+    <Cell x="-8.5" y="1"/>
+    <Cell x="-8" y="1"/>
+    <Cell x="-8" y="1.5"/>
+    <Cell x="-7.5" y="2"/>
+    <Cell x="-8.5" y="1.5"/>
+    <Cell x="-7" y="2.5"/>
+    <Cell x="-6.5" y="3"/>
+    <Cell x="-7" y="3"/>
+    <Cell x="-7.5" y="2.5"/>
+    <Cell x="-6.5" y="2.5"/>
+    <Cell x="-6.5" y="2"/>
+    <Cell x="-6.5" y="1.5"/>
+    <Cell x="-6.5" y="1"/>
+    <Cell x="-5" y="4"/>
+    <Cell x="-5" y="3.5"/>
+    <Cell x="-5" y="3"/>
+    <Cell x="-5" y="2.5"/>
+    <Cell x="-5" y="2"/>
+    <Cell x="-5" y="1.5"/>
+    <Cell x="-5" y="1"/>
+    <Cell x="-5" y="0.5"/>
+    <Cell x="-4.5" y="4.5"/>
+    <Cell x="-4" y="4.5"/>
+    <Cell x="-5" y="0"/>
+    <Cell x="-3.5" y="0"/>
+    <Cell x="-3.5" y="0.5"/>
+    <Cell x="-3.5" y="1"/>
+    <Cell x="-3.5" y="1.5"/>
+    <Cell x="-3.5" y="2"/>
+    <Cell x="-3.5" y="2.5"/>
+    <Cell x="-3.5" y="3"/>
+    <Cell x="-3.5" y="3.5"/>
+    <Cell x="-3.5" y="4"/>
+    <Cell x="-3.5" y="4.5"/>
+    <Cell x="-5" y="4.5"/>
+    <Cell x="-2.5" y="3.5"/>
+    <Cell x="-2.5" y="3"/>
+    <Cell x="-2.5" y="2.5"/>
+    <Cell x="-2.5" y="2"/>
+    <Cell x="-2.5" y="1.5"/>
+    <Cell x="-2.5" y="0.5"/>
+    <Cell x="-2.5" y="0"/>
+    <Cell x="-2.5" y="1"/>
+    <Cell x="-2" y="4"/>
+    <Cell x="-2.5" y="4"/>
+    <Cell x="-1.5" y="4"/>
+    <Cell x="-1" y="4"/>
+    <Cell x="-1" y="3.5"/>
+    <Cell x="-1" y="3"/>
+    <Cell x="-1" y="2.5"/>
+    <Cell x="-1" y="2"/>
+    <Cell x="-1" y="1.5"/>
+    <Cell x="-1" y="1"/>
+    <Cell x="-1" y="0.5"/>
+    <Cell x="-1" y="0"/>
+    <Cell x="0.5" y="0"/>
+    <Cell x="0.5" y="0.5"/>
+    <Cell x="0.5" y="1"/>
+    <Cell x="0.5" y="1.5"/>
+    <Cell x="0.5" y="2"/>
+    <Cell x="0.5" y="2.5"/>
+    <Cell x="0.5" y="3"/>
+    <Cell x="0.5" y="3.5"/>
+    <Cell x="0.5" y="4"/>
+    <Cell x="1" y="4"/>
+    <Cell x="1.5" y="4"/>
+    <Cell x="2" y="4"/>
+    <Cell x="2" y="3.5"/>
+    <Cell x="2" y="3"/>
+    <Cell x="2" y="2.5"/>
+    <Cell x="2" y="2"/>
+    <Cell x="2" y="1.5"/>
+    <Cell x="2" y="1"/>
+    <Cell x="2" y="0.5"/>
+    <Cell x="2" y="0"/>
+    <Cell x="3" y="0"/>
+    <Cell x="3" y="0.5"/>
+    <Cell x="3" y="1"/>
+    <Cell x="3" y="1.5"/>
+    <Cell x="3" y="2"/>
+    <Cell x="3" y="2.5"/>
+    <Cell x="3" y="3"/>
+    <Cell x="3" y="3.5"/>
+    <Cell x="3" y="-0.5"/>
+    <Cell x="3.5" y="2"/>
+    <Cell x="4" y="2"/>
+    <Cell x="4.5" y="2"/>
+    <Cell x="5" y="2.5"/>
+    <Cell x="5.5" y="2.5"/>
+    <Cell x="6" y="2.5"/>
+    <Cell x="6" y="2"/>
+    <Cell x="6.5" y="2"/>
+    <Cell x="7" y="2"/>
+    <Cell x="7.5" y="2"/>
+    <Cell x="8" y="2"/>
+    <Cell x="8.5" y="2"/>
+    <Cell x="8.5" y="1.5"/>
+    <Cell x="8.5" y="1"/>
+    <Cell x="8.5" y="0.5"/>
+    <Cell x="8" y="0"/>
+    <Cell x="7.5" y="-0.5"/>
+    <Cell x="7" y="-1"/>
+    <Cell x="6.5" y="-1.5"/>
+    <Cell x="6.5" y="-2"/>
+    <Cell x="6.5" y="-2.5"/>
+    <Cell x="6.5" y="-3"/>
+    <Cell x="6.5" y="-3.5"/>
+    <Cell x="-3" y="0"/>
+    <Cell x="-0.5" y="0"/>
+    <Cell x="0" y="0"/>
+    <Cell x="2.5" y="0"/>
+    <Cell x="-6.5" y="0.5"/>
+    <Cell x="-6" y="0.5"/>
+    <Cell x="-5.5" y="0.5"/>
+  </IsoBackground>
+</Map>
